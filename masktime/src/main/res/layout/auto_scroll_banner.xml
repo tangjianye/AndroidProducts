@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.peach.masktime.ui.view.ScrollViewPager
+    <com.product.masktime.ui.view.ScrollViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
         android:layout_height="@dimen/android_height_xlarge" />

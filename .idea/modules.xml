@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/AndroidDaoGenerator/AndroidDaoGenerator.iml" filepath="$PROJECT_DIR$/AndroidDaoGenerator/AndroidDaoGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidProducts.iml" filepath="$PROJECT_DIR$/AndroidProducts.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidPullToRefresh/AndroidPullToRefresh.iml" filepath="$PROJECT_DIR$/AndroidPullToRefresh/AndroidPullToRefresh.iml" />
-      <module fileurl="file://$PROJECT_DIR$/colorfulnote/colorfulnote.iml" filepath="$PROJECT_DIR$/colorfulnote/colorfulnote.iml" />
       <module fileurl="file://$PROJECT_DIR$/masktime/masktime.iml" filepath="$PROJECT_DIR$/masktime/masktime.iml" />
       <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
     </modules>

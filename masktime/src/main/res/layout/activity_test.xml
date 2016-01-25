@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <!--    <com.peach.masktime.ui.view.CircleSeekBar
+    <!--    <colorfulnotenote.ui.view.CircleSeekBar
             android:id="@+id/circle_seekbar"
             android:layout_width="@dimen/android_width_xlarge"
             android:layout_height="@dimen/android_height_xlarge"
@@ -18,7 +18,7 @@
             android_custom:progress_width="@dimen/android_width_normal"
             android_custom:show_progress_text="true" />-->
 
-    <!--    <com.peach.masktime.ui.view.CircularSeekBar
+    <!--    <colorfulnotenote.ui.view.CircularSeekBar
             android:id="@+id/circular_seekbar"
             android:layout_width="@dimen/android_width_xlarge"
             android:layout_height="@dimen/android_height_xlarge"

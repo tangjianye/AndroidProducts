@@ -6,11 +6,12 @@ import de.greenrobot.daogenerator.Schema;
 
 public class AndroidDaoGenerator {
     public static void main(String[] args) throws Exception {
-        Schema schema = new Schema(1, "com.peach.colorfulnote.db");
+        Schema schema = new Schema(1, "com.product.masktime.db");
 
         addNote(schema);
         addRecord(schema);
-        new DaoGenerator().generateAll(schema, "app/src/main/java");
+        addTblFacialMaskDiaryData(schema);
+        new DaoGenerator().generateAll(schema, "masktime/src/main/java");
     }
 
     private static void addNote(Schema schema) {
@@ -30,5 +31,20 @@ public class AndroidDaoGenerator {
         entity.addStringProperty("path02");
         entity.addStringProperty("path03");
         entity.addLongProperty("date").notNull();
+    }
+
+    // 表名 tblFacialMaskDiaryData
+    private static void addTblFacialMaskDiaryData(Schema schema) {
+        Entity entity = schema.addEntity("TblFacialMaskDiaryData");
+        entity.addIdProperty().autoincrement();
+        entity.addStringProperty("DiaryDate").notNull();
+        entity.addStringProperty("DiaryTime");
+        entity.addStringProperty("PicName");
+        entity.addStringProperty("DiaryContent");
+        entity.addStringProperty("QuestionId");
+        entity.addStringProperty("DiaryTitle");
+        entity.addStringProperty("CloudFlag");
+        entity.addStringProperty("Fill");
+        entity.addStringProperty("UpdateTime");
     }
 }

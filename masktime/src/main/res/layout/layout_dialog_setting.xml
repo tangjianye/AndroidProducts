@@ -40,7 +40,7 @@
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true" />-->
 
-        <com.peach.masktime.ui.layer.RawMusicContrlLayer
+        <com.product.masktime.ui.layer.RawMusicContrlLayer
             android:id="@+id/item_contrl_01"
             android:layout_width="@dimen/android_width_normal"
             android:layout_height="@dimen/android_height_normal"
@@ -74,7 +74,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true" />-->
 
-        <com.peach.masktime.ui.layer.RawMusicContrlLayer
+        <com.product.masktime.ui.layer.RawMusicContrlLayer
             android:id="@+id/item_contrl_02"
             android:layout_width="@dimen/android_width_normal"
             android:layout_height="@dimen/android_height_normal"
@@ -108,7 +108,7 @@
             android:layout_height="@dimen/android_height_normal"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true" />-->
-        <com.peach.masktime.ui.layer.RawMusicContrlLayer
+        <com.product.masktime.ui.layer.RawMusicContrlLayer
             android:id="@+id/item_contrl_03"
             android:layout_width="@dimen/android_width_normal"
             android:layout_height="@dimen/android_height_normal"
@@ -141,7 +141,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true" />-->
 
-        <com.peach.masktime.ui.layer.RawMusicContrlLayer
+        <com.product.masktime.ui.layer.RawMusicContrlLayer
             android:id="@+id/item_contrl_04"
             android:layout_width="@dimen/android_width_normal"
             android:layout_height="@dimen/android_height_normal"
