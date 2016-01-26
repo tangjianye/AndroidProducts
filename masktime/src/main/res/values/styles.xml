@@ -39,7 +39,7 @@
     <style name="AppBaseTheme" parent="BaseTheme">
         <item name="@android:windowAnimationStyle">@style/AnimationActivity</item>
         <item name="android:textSize">@dimen/font_size_middle</item>
-        <item name="android:textColor">@color/black</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="AnimationActivity">
@@ -102,7 +102,7 @@
         <item name="android:layout_marginTop">@dimen/android_margin_normal</item>
         <item name="android:divider">@android:color/transparent</item>
         <item name="android:cacheColorHint">@android:color/transparent</item>
-        <item name="android:dividerHeight">@dimen/android_divider_height_normal</item>
+<!--        <item name="android:dividerHeight">@dimen/android_divider_height_normal</item>-->
         <item name="android:fadingEdge">none</item>
         <item name="android:fastScrollEnabled">false</item>
         <item name="android:footerDividersEnabled">false</item>

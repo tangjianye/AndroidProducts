@@ -3,11 +3,11 @@
     android:shape="rectangle">
 
     <!-- 填充颜色 -->
-    <solid android:color="@color/lemonchiffon"></solid>
+    <solid android:color="@color/white"></solid>
 
     <!-- 线的宽度，颜色灰色 -->
     <stroke
-        android:width="@dimen/android_stroke_width_normal"
+        android:width="@dimen/android_stroke_width_middle"
         android:color="@color/gray"></stroke>
 
     <!-- 矩形的圆角半径 -->

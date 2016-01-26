@@ -70,6 +70,7 @@
     <dimen name="size4">4dp</dimen>
     <dimen name="size8">8dp</dimen>
     <dimen name="size10">10dp</dimen>
+    <dimen name="size35">35dp</dimen>
     <dimen name="size50">50dp</dimen>
     <dimen name="size100">100dp</dimen>
     <dimen name="size120">120dp</dimen>
@@ -84,6 +85,6 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="activity_timeline_listitem_offset">128dp</dimen>
+    <dimen name="activity_timeline_listitem_offset">100dp</dimen>
     <!-- Other activity dimen. End -->
 </resources>

@@ -7,10 +7,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.product.common.utils.AnimatorUtils;
 import com.product.masktime.R;
 import com.product.masktime.common.AppManager;
 import com.product.masktime.ui.dialog.LoadingDialog;
-import com.product.common.utils.AnimatorUtils;
 
 /**
  * Created by tangjy on 2015/10/24.
@@ -189,8 +189,7 @@ public abstract class BaseActivity extends FragmentActivity {
      * @param pBundle
      * @see {@link android.app.Activity#startActivityForResult}
      */
-    protected void openActivityForResult(Class<?> pClass, int requestCode,
-                                         Bundle pBundle) {
+    public void openActivityForResult(Class<?> pClass, int requestCode, Bundle pBundle) {
         Intent intent = new Intent(this, pClass);
         if (pBundle != null) {
             intent.putExtras(pBundle);

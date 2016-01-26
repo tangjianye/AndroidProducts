@@ -9,10 +9,13 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.product.common.utils.LogUtils;
+import com.product.common.utils.TextUtils;
 import com.product.masktime.R;
+import com.product.masktime.db.DBRecordHelper;
+import com.product.masktime.db.Record;
 import com.product.masktime.ui.notification.Notify;
 import com.product.masktime.ui.view.CircularSeekBar;
-import com.product.common.utils.LogUtils;
 
 import java.util.HashMap;
 
@@ -115,7 +118,7 @@ public class TimeContrlLayer extends RelativeLayout implements View.OnClickListe
         mTimeContrl.setOnClickListener(this);
 
         mCircularSeekbar.setRingBackgroundColor(getResources().getColor(R.color.white));
-        mCircularSeekbar.setProgressColor(getResources().getColor(R.color.pink));
+        mCircularSeekbar.setProgressColor(getResources().getColor(R.color.ma_seekbar_progress_bg));
         mCircularSeekbar.setBackGroundColor(getResources().getColor(R.color.ghostwhite));
         mCircularSeekbar.setBarWidth(getResources().getDimensionPixelSize(R.dimen.circular_seekbar_width_normal));
         mCircularSeekbar.hideSeekBar();
@@ -142,6 +145,7 @@ public class TimeContrlLayer extends RelativeLayout implements View.OnClickListe
                     setPlayStatus(Status.PAUSE);
                 } else if (Status.PAUSE == mStatus || Status.STOP == mStatus || Status.IDLE == mStatus) {
                     setPlayStatus(Status.PLAY);
+                    saveLocal();
                 }
                 break;
             default:
@@ -245,4 +249,12 @@ public class TimeContrlLayer extends RelativeLayout implements View.OnClickListe
 //            setPlayStatus(Status.PLAY);
 //        }
 //    }
+
+    private void saveLocal() {
+        String title = TextUtils.getString(getContext(), R.string.label_ra_title_defaut);
+        String content = TextUtils.getString(getContext(), R.string.label_ra_content_defaut);
+        Record info = new Record(null, title, content, null, null, null, System.currentTimeMillis());
+        // DBManager.getInstance().getRecordDao().insert(info);
+        DBRecordHelper.getInstance().save(info);
+    }
 }

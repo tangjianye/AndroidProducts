@@ -15,6 +15,11 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.google.gson.reflect.TypeToken;
+import com.product.common.utils.AnimatorUtils;
+import com.product.common.utils.LogUtils;
+import com.product.common.utils.SPUtils;
+import com.product.common.utils.StringUtils;
+import com.product.common.utils.TimeUtils;
 import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.common.interfaces.IInit;
@@ -26,18 +31,14 @@ import com.product.masktime.module.net.request.GsonRequest;
 import com.product.masktime.module.net.response.AccountItem;
 import com.product.masktime.module.net.response.MaskObjectSet;
 import com.product.masktime.ui.base.BaseTitleActivity;
-import com.product.common.utils.AnimatorUtils;
-import com.product.common.utils.LogUtils;
-import com.product.common.utils.SPUtils;
-import com.product.common.utils.StringUtils;
-import com.product.common.utils.TimeUtils;
+import com.product.masktime.utils.CommonUtils;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class RecordingActivity extends BaseTitleActivity implements IInit, View.OnClickListener {
     private static final String TAG = RecordingActivity.class.getSimpleName();
-
+    private Record mRecord;
     private String mTitle;
     private String mContent;
 
@@ -77,6 +78,7 @@ public class RecordingActivity extends BaseTitleActivity implements IInit, View.
 
     @Override
     public void initDatas() {
+        mRecord = (Record) CommonUtils.getMaskSerializable(getIntent());
     }
 
     @Override
@@ -89,6 +91,9 @@ public class RecordingActivity extends BaseTitleActivity implements IInit, View.
         mEtTitle = (EditText) findViewById(R.id.et_title);
         mEtContent = (EditText) findViewById(R.id.et_content);
         mBtnSubmit = (Button) findViewById(R.id.btn_submit);
+
+        mEtTitle.setText(null != mRecord ? mRecord.getTitle() : null);
+        mEtContent.setText(null != mRecord ? mRecord.getContent() : null);
     }
 
     @Override
@@ -121,6 +126,8 @@ public class RecordingActivity extends BaseTitleActivity implements IInit, View.
             set.start();
         } else {
             saveLocal();
+
+            setResult(Activity.RESULT_OK, null);
             finish();
             // request(url, mTitle, mContent);
         }
@@ -128,9 +135,11 @@ public class RecordingActivity extends BaseTitleActivity implements IInit, View.
 
     private void saveLocal() {
         Record info = new Record(null, mTitle, mContent, null, null, null, System.currentTimeMillis());
-        // DBManager.getInstance().getRecordDao().insert(info);
-        DBRecordHelper.getInstance().save(info);
-        setResult(Activity.RESULT_OK);
+        if (null != mRecord) {
+            DBRecordHelper.getInstance().update(mRecord, info);
+        } else {
+            DBRecordHelper.getInstance().save(info);
+        }
     }
 
     @NonNull

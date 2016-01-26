@@ -36,6 +36,10 @@ public class DBRecordHelper {
         return mRecordDao.load(id);
     }
 
+    public Long getKey(Record entity) {
+        return mRecordDao.getKey(entity);
+    }
+
     public List<Record> loadAll() {
         return mRecordDao.loadAll();
     }
@@ -46,6 +50,15 @@ public class DBRecordHelper {
                 .orderDesc(RecordDao.Properties.Date)
                 .build();
         return query.list();
+    }
+
+    public Record loadByDate(long date) {
+        Query<Record> query = mRecordDao
+                .queryBuilder()
+                .where(RecordDao.Properties.Date.eq(date))
+                .build();
+        List<Record> records = query.list();
+        return (null != records && records.size() > 0) ? records.get(0) : null;
     }
 
     /**
@@ -71,6 +84,12 @@ public class DBRecordHelper {
         return mRecordDao.insertOrReplace(record);
     }
 
+
+    public void update(Record oldEntiy, Record newEntiy) {
+        long key = mRecordDao.getKey(oldEntiy);
+        newEntiy.setId(key);
+        mRecordDao.update(newEntiy);
+    }
 
     /**
      * insert or update noteList use transaction

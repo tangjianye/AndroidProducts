@@ -17,23 +17,29 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/android_margin_middle"
             android:layout_marginRight="@dimen/android_margin_middle"
-            android:layout_marginTop="@dimen/android_margin_middle"
+            android:layout_marginTop="@dimen/android_margin_huge"
             android:orientation="vertical">
 
             <EditText
                 android:id="@+id/et_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@color/transparent"
                 android:hint="@string/prompt_record_title"
                 android:inputType="text"
                 android:maxLines="1"
                 android:singleLine="true" />
+
+            <View
+                style="@style/DividerStyle"
+                android:layout_marginTop="@dimen/android_margin_middle" />
 
             <EditText
                 android:id="@+id/et_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/android_margin_middle"
+                android:background="@color/transparent"
                 android:gravity="left|top"
                 android:hint="@string/prompt_record_note"
                 android:inputType="textMultiLine"
@@ -41,12 +47,22 @@
                 android:minLines="3"
                 android:singleLine="false" />
 
+
+            <!--            <ImageView
+                            android:id="@+id/iv_add"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/android_margin_middle"
+                            android:src="@drawable/sent_add" />-->
+
             <Button
                 android:id="@+id/btn_submit"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/android_margin_middle"
+                android:layout_height="@dimen/android_btn_height"
+                android:layout_marginTop="@dimen/android_margin_huge"
+                android:background="@drawable/selector_btn_pink"
                 android:text="@string/action_submit"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <!--            <TextView

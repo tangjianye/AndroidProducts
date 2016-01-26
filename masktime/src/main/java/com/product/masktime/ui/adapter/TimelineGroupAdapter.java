@@ -5,11 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.product.masktime.R;
-import com.product.masktime.db.Record;
 import com.product.common.utils.TimeUtils;
+import com.product.masktime.R;
+import com.product.masktime.common.Constants;
+import com.product.masktime.db.Record;
+import com.product.masktime.ui.activity.RecordDetailActivity;
+import com.product.masktime.ui.base.BaseActivity;
+import com.product.masktime.utils.CommonUtils;
 
 import java.util.ArrayList;
 
@@ -67,7 +72,8 @@ public class TimelineGroupAdapter extends BaseAdapter {
             holder.lyGroup = convertView.findViewById(R.id.ly_title);
             holder.lyChild = convertView.findViewById(R.id.ly_body);
             holder.lyLine = convertView.findViewById(R.id.ly_line);
-            // holder.image = (NetworkImageView) convertView.findViewById(R.id.nt_image);
+            holder.lyBodyContent = convertView.findViewById(R.id.ly_body_content);
+            holder.ivTitle = (ImageView) convertView.findViewById(R.id.iv_title);
             holder.titleDate = (TextView) convertView.findViewById(R.id.txt_title_date);
             holder.titleNum = (TextView) convertView.findViewById(R.id.txt_title_num);
             holder.bodyTitle = (TextView) convertView.findViewById(R.id.txt_body_title);
@@ -81,6 +87,17 @@ public class TimelineGroupAdapter extends BaseAdapter {
             holder.lyGroup.setVisibility(View.VISIBLE);
             holder.titleDate.setText(TimeUtils.getTime(item.getDate(), TimeUtils.DATE_FORMAT_DAY));
             holder.titleNum.setText(String.format(mContext.getString(R.string.label_group_num), getGroupSize(position)));
+
+            int groupPosition = getGroupPosition(position);
+            if (groupPosition % 2 == 0) {
+                holder.titleDate.setTextColor(mContext.getResources().getColor(R.color.ma_note_bg));
+                holder.titleNum.setTextColor(mContext.getResources().getColor(R.color.ma_note_bg));
+                holder.ivTitle.setImageResource(R.drawable.time_orage);
+            } else {
+                holder.titleDate.setTextColor(mContext.getResources().getColor(R.color.ra_circle_blue_bg));
+                holder.titleNum.setTextColor(mContext.getResources().getColor(R.color.ra_circle_blue_bg));
+                holder.ivTitle.setImageResource(R.drawable.time_green);
+            }
         } else {
             holder.lyGroup.setVisibility(View.GONE);
         }
@@ -89,6 +106,14 @@ public class TimelineGroupAdapter extends BaseAdapter {
         holder.bodyTitle.setText(item.getTitle());
         holder.bodyDate.setText(TimeUtils.getTime(item.getDate(), TimeUtils.DATE_FORMAT_HH_MM_SS));
         // CommonUtils.setImageUrl(mContext, holder.image, info.getCover());
+
+        holder.lyBodyContent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ((BaseActivity) mContext).openActivityForResult(RecordDetailActivity.class,
+                        Constants.COMMON_REQUEST_CODE, CommonUtils.getMaskBundle(item));
+            }
+        });
         return convertView;
     }
 
@@ -138,12 +163,28 @@ public class TimelineGroupAdapter extends BaseAdapter {
         return 0;
     }
 
+    public int getGroupPosition(int position) {
+        int count = 0;
+        for (int i = 0; i < mGroupData.size(); i++) {
+            ArrayList<Record> list = mGroupData.get(i);
+            for (int j = 0; j < list.size(); j++) {
+                if (count == position) {
+                    return i;
+                }
+                count++;
+            }
+        }
+        return 0;
+    }
+
     static class TimelineViewHolder {
         public View lyGroup;
         public View lyChild;
         public View lyLine;
+        public View lyBodyContent;
 
         // public NetworkImageView image;
+        public ImageView ivTitle;
         public TextView titleDate;
         public TextView titleNum;
         public TextView bodyTitle;

@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/android_title_height"
-    android:background="@color/orange"
+    android:background="@color/ma_note_bg"
     android:orientation="vertical">
 
 
@@ -13,7 +13,7 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:layout_margin="@dimen/android_margin_normal"
-        android:background="@drawable/selector_ic_back" />
+        android:src="@drawable/selector_ic_back" />
 
     <TextView
         android:id="@+id/title_header"
@@ -28,5 +28,5 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_margin="@dimen/android_margin_normal"
-        android:background="@drawable/selector_ic_more" />
+        android:src="@drawable/selector_ic_more" />
 </RelativeLayout>

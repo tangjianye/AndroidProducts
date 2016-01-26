@@ -14,13 +14,13 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.widget.ImageView;
 
+import com.product.common.utils.FileUtils;
+import com.product.common.utils.LogUtils;
+import com.product.common.utils.SPUtils;
 import com.product.masktime.common.Constants;
 import com.product.masktime.config.GlobalSetting;
 import com.product.masktime.module.image.ImageLoaderManager;
 import com.product.masktime.module.net.API;
-import com.product.common.utils.FileUtils;
-import com.product.common.utils.LogUtils;
-import com.product.common.utils.SPUtils;
 
 import java.io.Serializable;
 import java.util.List;
@@ -191,9 +191,15 @@ public class CommonUtils {
      */
     public static Intent getMaskIntent(Context context, Bundle bundle, Class<?> cls) {
         Intent intent = new Intent();
-        intent.putExtra(Constants.SPKey.INTENT_KEY, bundle);
-        // intent.putExtras(bundle);
+        // intent.putExtra(Constants.SPKey.INTENT_KEY, bundle);
+        intent.putExtras(bundle);
         intent.setClass(context.getApplicationContext(), cls);
+        return intent;
+    }
+
+    public static Intent getMaskIntent(Context context, Bundle bundle) {
+        Intent intent = new Intent();
+        intent.putExtras(bundle);
         return intent;
     }
 
@@ -205,13 +211,24 @@ public class CommonUtils {
      */
     public static Serializable getMaskSerializable(Intent intent) {
         if (null != intent) {
-            Bundle bundle = intent.getBundleExtra(Constants.SPKey.INTENT_KEY);
+            // Bundle bundle = intent.getBundleExtra(Constants.SPKey.INTENT_KEY);
+            Bundle bundle = intent.getExtras();
             if (null != bundle) {
                 return bundle.getSerializable(Constants.SPKey.BUNDLE_KEY);
             }
         }
         return null;
     }
+
+//    public static String getMaskString(Intent intent) {
+//        if (null != intent) {
+//            Bundle bundle = intent.getExtras();
+//            if (null != bundle) {
+//                return bundle.getString(Constants.SPKey.BUNDLE_KEY);
+//            }
+//        }
+//        return null;
+//    }
 
     /**
      * 绑定数据
@@ -222,6 +239,12 @@ public class CommonUtils {
     public static Bundle getMaskBundle(Serializable value) {
         Bundle bundle = new Bundle();
         bundle.putSerializable(Constants.SPKey.BUNDLE_KEY, value);
+        return bundle;
+    }
+
+    public static Bundle getMaskBundle(String value) {
+        Bundle bundle = new Bundle();
+        bundle.putString(Constants.SPKey.BUNDLE_KEY, value);
         return bundle;
     }
 

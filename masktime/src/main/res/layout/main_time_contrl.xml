@@ -46,6 +46,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/android_margin_middle"
+        android:textColor="@color/white"
+        android:textSize="@dimen/font_size_huge"
         android:text="@string/app_name" />
 
 </com.product.masktime.ui.layer.TimeContrlLayer>

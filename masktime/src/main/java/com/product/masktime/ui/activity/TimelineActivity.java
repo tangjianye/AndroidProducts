@@ -4,8 +4,11 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 
 import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.product.common.utils.LogUtils;
+import com.product.common.utils.TimeUtils;
 import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.common.interfaces.IInit;
@@ -13,8 +16,6 @@ import com.product.masktime.db.DBRecordHelper;
 import com.product.masktime.db.Record;
 import com.product.masktime.ui.adapter.TimelineGroupAdapter;
 import com.product.masktime.ui.base.BaseListActivity;
-import com.product.common.utils.LogUtils;
-import com.product.common.utils.TimeUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -86,7 +87,13 @@ public class TimelineActivity extends BaseListActivity implements IInit {
 
     @Override
     public void initEvents() {
-
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+//                Bundle bundle = CommonUtils.getMaskBundle(playBean);
+//                openActivityForResult(RecordingActivity.class, Constants.COMMON_REQUEST_CODE, bundle);
+            }
+        });
     }
 
     @Override

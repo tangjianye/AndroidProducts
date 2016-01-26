@@ -8,7 +8,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="5"
+        android:layout_weight="6"
         android:orientation="vertical">
 
         <TextView
@@ -17,12 +17,14 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/android_margin_middle"
-            android:text="@string/app_name" />
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_size_medium" />
 
         <include
             layout="@layout/online_music_contrl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="@dimen/size35"
+            android:layout_height="@dimen/size35"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_margin="@dimen/android_margin_normal" />
@@ -43,22 +45,30 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3"
-        android:background="@color/pink"
-        android:gravity="center_vertical"
-        android:orientation="vertical">
+        android:layout_weight="2"
+        android:background="@color/ma_note_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/android_padding_normal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/app_name" />
+            android:layout_gravity="center_horizontal"
+            android:text="@string/label_my_skincare" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/label_quick_setting_time"
+            android:textSize="@dimen/font_size_small" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="2"
-        android:background="#0000ff"
+        android:background="@color/ma_tab_bg"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -73,16 +83,6 @@
             android:text="@string/main_community" />
 
         <TextView
-            android:id="@+id/txt_record"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0"
-            android:drawablePadding="@dimen/android_padding_normal"
-            android:drawableTop="@drawable/selector_btn_record"
-            android:gravity="center"
-            android:text="@string/main_record" />
-
-        <TextView
             android:id="@+id/txt_store"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -91,6 +91,16 @@
             android:drawableTop="@drawable/selector_btn_store"
             android:gravity="center"
             android:text="@string/main_album" />
+
+        <TextView
+            android:id="@+id/txt_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:drawablePadding="@dimen/android_padding_normal"
+            android:drawableTop="@drawable/selector_btn_record"
+            android:gravity="center"
+            android:text="@string/main_record" />
 
         <TextView
             android:id="@+id/txt_setting"

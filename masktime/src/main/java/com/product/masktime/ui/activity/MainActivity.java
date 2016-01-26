@@ -69,20 +69,20 @@ public class MainActivity extends BaseActivity implements IInit, View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_community:
-                openActivity(CommunityActivity.class);
+                // openActivity(CommunityActivity.class);
                 // openActivity(BaseList2Activity.class);
                 // openActivity(TestActivity.class);
                 // Notify.getInstance().show(this);
                 // DBManager.getInstance().deleteAll();
                 break;
+            case R.id.txt_store:
+                // openActivity(AlbumActivity.class);
+                break;
             case R.id.txt_record:
                 openActivity(TimelineActivity.class);
                 break;
-            case R.id.txt_store:
-                openActivity(AlbumActivity.class);
-                break;
             case R.id.txt_setting:
-                openActivity(SettingActivity.class);
+                // openActivity(SettingActivity.class);
                 break;
             default:
                 break;
