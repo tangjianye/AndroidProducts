@@ -2,6 +2,7 @@ package com.product.masktime.common;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 
 import java.util.Stack;
 
@@ -77,5 +78,17 @@ public class AppManager {
             }
         } catch (Exception e) {
         }
+    }
+
+    public boolean resumeApp(Context context) {
+        boolean isAppLive = false;
+        Activity activity = getTopActivity();
+        if (activity != null) {
+            isAppLive = true;
+            Intent intent = new Intent(context, activity.getClass());
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+            context.startActivity(intent);
+        }
+        return isAppLive;
     }
 }

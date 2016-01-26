@@ -3,12 +3,13 @@ package com.product.masktime.ui.activity;
 import android.os.Bundle;
 import android.view.ViewStub;
 
+import com.product.common.utils.SPUtils;
 import com.product.masktime.R;
+import com.product.masktime.common.AppManager;
 import com.product.masktime.common.Constants;
 import com.product.masktime.ui.base.BaseActivity;
 import com.product.masktime.ui.layer.GuideLayer;
 import com.product.masktime.ui.layer.WelcomeLayer;
-import com.product.common.utils.SPUtils;
 
 public class SplashActivity extends BaseActivity {
     private static final String TAG = SplashActivity.class.getSimpleName();
@@ -17,6 +18,12 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // 防止用户点击状态栏重新激活app
+        if (AppManager.getInstance().resumeApp(this)) {
+            finish();
+            return;
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
 
