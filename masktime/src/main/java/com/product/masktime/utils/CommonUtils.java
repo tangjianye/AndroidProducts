@@ -30,7 +30,7 @@ import java.util.List;
  */
 public class CommonUtils {
     private static final String TAG = CommonUtils.class.getSimpleName();
-    private static final String CHANNEL = "CHANNEL";
+    private static final String CHANNEL = "UMENG_CHANNEL";
 
     /**
      * common

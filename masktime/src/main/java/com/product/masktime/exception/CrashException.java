@@ -5,9 +5,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 
+import com.product.common.utils.LogUtils;
 import com.product.masktime.BaseApplication;
 import com.product.masktime.ui.activity.SplashActivity;
-import com.product.common.utils.LogUtils;
+import com.umeng.analytics.MobclickAgent;
 
 import java.lang.Thread.UncaughtExceptionHandler;
 
@@ -58,7 +59,7 @@ public class CrashException implements UncaughtExceptionHandler {
             return false;
         }
         LogUtils.i(TAG, "handleException");
-        // MobclickAgent.reportError(mContext, ex);
+        MobclickAgent.reportError(mContext, ex);
         ex.printStackTrace();
 
         // 重新启动应用

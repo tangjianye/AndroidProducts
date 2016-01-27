@@ -26,7 +26,7 @@ android {
     productFlavors {
         "default" {}
         baidu {}
-        "360" {}
+        qh360 {}
     }
 
     productFlavors.all { flavor ->
@@ -70,7 +70,7 @@ android {
 
             if (variant.buildType.name.equals('release')) {
                 // println(variant.productFlavors[0].name)
-                def releaseApkName = name + '-release' + '.apk'
+                def releaseApkName = name + '-' + version + '-release' + '.apk'
                 output.outputFile = new File(oldFile.parent, releaseApkName)
             }
 
@@ -125,4 +125,8 @@ dependencies {
     compile files('libs/httpclient-android-4.3.5.1.jar')
     compile 'com.jakewharton:butterknife:7.0.1'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    compile files('libs/umeng-update-v2.6.0.1.jar')
+    compile files('src/main/jniLibs/pushservice-4.5.6.87.jar')
+    compile files('libs/pushservice-4.5.6.87.jar')
 }

@@ -11,6 +11,7 @@ import com.product.common.utils.AnimatorUtils;
 import com.product.masktime.R;
 import com.product.masktime.common.AppManager;
 import com.product.masktime.ui.dialog.LoadingDialog;
+import com.umeng.analytics.MobclickAgent;
 
 /**
  * Created by tangjy on 2015/10/24.
@@ -39,6 +40,7 @@ public abstract class BaseActivity extends FragmentActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
         AppManager.getInstance().killActivity(this);
         AnimatorUtils.onDestroyActivity();
         cancelToast();
@@ -48,11 +50,13 @@ public abstract class BaseActivity extends FragmentActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        MobclickAgent.onResume(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
+        MobclickAgent.onPause(this);
     }
 
     @Override

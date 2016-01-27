@@ -1,4 +1,4 @@
-package com.product.masktime.thridpart;
+package com.product.masktime.thridpart.other;
 
 import android.content.Context;
 
