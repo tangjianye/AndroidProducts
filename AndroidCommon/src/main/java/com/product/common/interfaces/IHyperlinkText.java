@@ -2,7 +2,7 @@ package com.product.common.interfaces;
 
 /**
  * 超链接回调
- * @author 彭毅
+ * @author tangjy
  *
  */
 public interface IHyperlinkText {

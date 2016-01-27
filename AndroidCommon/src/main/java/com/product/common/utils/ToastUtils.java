@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.widget.Toast;
 
+@Deprecated
 public class ToastUtils {
     private Toast mToast = null;
 
@@ -16,6 +17,7 @@ public class ToastUtils {
         if (mToast == null) {
             mToast = new Toast(context);
         }
+        mToast.setText(text);
         mToast.show();
     }
 
