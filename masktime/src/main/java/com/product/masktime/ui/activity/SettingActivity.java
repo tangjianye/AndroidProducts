@@ -29,6 +29,8 @@ public class SettingActivity extends BaseTitleActivity implements IInit, View.On
         initTitles();
         initViews();
         initEvents();
+
+        int i = 10 / 0;
     }
 
     @Override

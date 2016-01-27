@@ -1,4 +1,4 @@
-package com.product.masktime.module.thirdparty;
+package com.product.masktime.thridpart;
 
 import android.content.Context;
 

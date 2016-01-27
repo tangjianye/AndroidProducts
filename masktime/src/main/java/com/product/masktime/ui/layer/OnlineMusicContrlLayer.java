@@ -9,7 +9,7 @@ import android.widget.FrameLayout;
 
 import com.product.masktime.R;
 import com.product.masktime.common.Constants;
-import com.product.masktime.module.thirdparty.Douban;
+import com.product.masktime.thridpart.Douban;
 import com.product.masktime.ui.base.BaseActivity;
 import com.product.masktime.ui.beans.PlayBean;
 import com.product.masktime.ui.service.OnlinePlayerService;

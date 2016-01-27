@@ -19,14 +19,14 @@ public class SplashActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // 防止用户点击状态栏重新激活app
-        if (AppManager.getInstance().resumeApp(this)) {
+        boolean isAppLive = AppManager.getInstance().resumeApp(this);
+        super.onCreate(savedInstanceState);
+        if (isAppLive) {
             finish();
             return;
         }
 
-        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
-
         switchView(getGuideSwitch());
     }
 
