@@ -26,7 +26,7 @@ public class StatisticsProxy {
         if (!(context instanceof Application)) {
             throw new AssertionError();
         }
-        sCtx = context;
+        // sCtx = context;
 
         /** 友盟继承测试集成. */
         // String device = getDeviceInfo(context);
@@ -39,7 +39,7 @@ public class StatisticsProxy {
         // MobclickAgent.openActivityDurationTrack(false);
 
         /** 如不需要错误统计功能，可通过此方法关闭. */
-        MobclickAgent.setCatchUncaughtExceptions(false);
+        // MobclickAgent.setCatchUncaughtExceptions(false);
 
         /** 设置是否对日志信息进行加密, 默认false(不加密). */
         AnalyticsConfig.enableEncrypt(false);

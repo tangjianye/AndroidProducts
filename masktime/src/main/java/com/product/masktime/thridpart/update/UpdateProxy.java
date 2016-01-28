@@ -27,7 +27,7 @@ public class UpdateProxy {
         if (!(context instanceof Application)) {
             throw new AssertionError();
         }
-        sCtx = context;
+        // sCtx = context;
         UmengUpdateAgent.setUpdateOnlyWifi(false);
     }
 

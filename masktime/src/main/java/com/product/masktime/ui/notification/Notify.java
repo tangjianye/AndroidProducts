@@ -8,12 +8,12 @@ import android.content.Intent;
 import android.net.Uri;
 import android.support.annotation.NonNull;
 
+import com.product.common.utils.LogUtils;
 import com.product.masktime.BaseApplication;
 import com.product.masktime.R;
 import com.product.masktime.ui.activity.MainActivity;
 import com.product.masktime.ui.activity.SplashActivity;
 import com.product.masktime.utils.CommonUtils;
-import com.product.common.utils.LogUtils;
 
 /**
  * Created by Administrator on 2015/12/9 0009.
@@ -70,7 +70,7 @@ public class Notify {
         notify.flags |= Notification.FLAG_AUTO_CANCEL;
         // notify.defaults = Notification.DEFAULT_SOUND;
         notify.sound = Uri.parse("android.resource://" +
-                CommonUtils.getAppPackageName(context) + "/" + CommonUtils.getMusicId(context));
+                context.getPackageName() + "/" + CommonUtils.getMusicId(context));
         sManager.notify(TIME_UP_ID, notify);
     }
 

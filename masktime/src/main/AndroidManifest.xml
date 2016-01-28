@@ -128,7 +128,6 @@
             </intent-filter>
         </receiver>
 
-
         <!-- Umeng start -->
         <meta-data
             android:name="UMENG_APPKEY"
