@@ -7,15 +7,18 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.android.volley.toolbox.NetworkImageView;
 import com.product.common.utils.AppUtils;
 import com.product.common.utils.FileUtils;
 import com.product.common.utils.LogUtils;
 import com.product.common.utils.SDCardUtils;
 import com.product.common.utils.SPUtils;
+import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.config.GlobalSetting;
 import com.product.masktime.module.image.ImageLoaderManager;
 import com.product.masktime.module.net.API;
+import com.product.masktime.module.net.VolleyManager;
 
 import java.io.Serializable;
 
@@ -24,97 +27,11 @@ import java.io.Serializable;
  */
 public class CommonUtils {
     private static final String TAG = CommonUtils.class.getSimpleName();
-//    private static final String CHANNEL = "UMENG_CHANNEL";
 
     /**
      * common
      **********************************************************************************************/
-//    /**
-//     * 获取meta信息
-//     *
-//     * @param context
-//     * @param metaKey
-//     * @return
-//     */
-//    public static String getMetaValue(Context context, String metaKey) {
-//        Bundle metaData = null;
-//        String apiKey = null;
-//        if (context == null || metaKey == null) {
-//            return null;
-//        }
-//        try {
-//            ApplicationInfo ai = context.getPackageManager()
-//                    .getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
-//            if (null != ai) {
-//                metaData = ai.metaData;
-//            }
-//            if (null != metaData) {
-//                apiKey = metaData.getString(metaKey);
-//            }
-//        } catch (PackageManager.NameNotFoundException e) {
-//            e.printStackTrace();
-//        }
-//        return apiKey;
-//    }
-//
-//    /**
-//     * 获取当前activity
-//     *
-//     * @param context
-//     * @return
-//     */
-//    public static String getTopActivity(Context context) {
-//        ActivityManager manager = (ActivityManager) context.getSystemService(Activity.ACTIVITY_SERVICE);
-//        List<ActivityManager.RunningTaskInfo> taskInfo = manager.getRunningTasks(1);
-//
-//        if (taskInfo != null) {
-//            ComponentName componentInfo = taskInfo.get(0).topActivity;
-//            return componentInfo.getClassName();
-//        }
-//        return null;
-//    }
 
-//    /**
-//     * 获取apk信息
-//     *
-//     * @param context
-//     * @return
-//     */
-//    public static void getAppInfo(Context context) {
-//        String versionName = "0.0";
-//        int versionCode = 0;
-//        PackageManager manager = context.getPackageManager();
-//        try {
-//            PackageInfo info = manager.getPackageInfo(context.getPackageName(), 0);
-//            versionName = info.versionName; // 版本名
-//            versionCode = info.versionCode; // 版本号
-//            System.out.println(versionCode + " " + versionName);
-//            LogUtils.i(TAG, "packageName = " + context.getPackageName()
-//                    + " ;versionName = " + versionName + " ;versionCode = " + versionCode);
-//        } catch (Exception e) {
-//            // TODO Auto-generated catch blockd
-//            e.printStackTrace();
-//        }
-//    }
-
-//    /**
-//     * 获取apk信息
-//     *
-//     * @param context
-//     * @return
-//     */
-//    public static String getAppPackageName(Context context) {
-//        String packageName = null;
-//        PackageManager manager = context.getPackageManager();
-//        try {
-//            packageName = context.getPackageName();
-//            LogUtils.i(TAG, "packageName = " + context.getPackageName());
-//        } catch (Exception e) {
-//            // TODO Auto-generated catch blockd
-//            e.printStackTrace();
-//        }
-//        return packageName;
-//    }
     public static String getSdCard() {
         // String sdcard = Environment.getExternalStorageDirectory().getAbsolutePath();
         String sdcard = SDCardUtils.getSDCardPath();
@@ -151,18 +68,19 @@ public class CommonUtils {
         return channel;
     }
 
-//    /**
-//     * 设置图片显示
-//     *
-//     * @param context
-//     * @param view
-//     * @param url
-//     */
-//    public static void setImageUrl(Context context, NetworkImageView view, String url) {
-//        view.setDefaultImageResId(R.drawable.place_holder);
-//        view.setErrorImageResId(R.drawable.place_holder);
-//        view.setImageUrl(API.getPicUrl(url), VolleyManager.getInstance().getImageLoader());
-//    }
+    /**
+     * 设置图片显示
+     *
+     * @param context
+     * @param view
+     * @param url
+     */
+    @Deprecated
+    public static void setImageUrl(Context context, NetworkImageView view, String url) {
+        view.setDefaultImageResId(R.drawable.place_holder);
+        view.setErrorImageResId(R.drawable.place_holder);
+        view.setImageUrl(API.getPicUrl(url), VolleyManager.getInstance().getImageLoader());
+    }
 
     /**
      * 设置图片显示
@@ -213,16 +131,6 @@ public class CommonUtils {
         return null;
     }
 
-//    public static String getMaskString(Intent intent) {
-//        if (null != intent) {
-//            Bundle bundle = intent.getExtras();
-//            if (null != bundle) {
-//                return bundle.getString(Constants.SPKey.BUNDLE_KEY);
-//            }
-//        }
-//        return null;
-//    }
-
     /**
      * 绑定数据
      *
@@ -234,12 +142,6 @@ public class CommonUtils {
         bundle.putSerializable(Constants.SPKey.BUNDLE_KEY, value);
         return bundle;
     }
-
-//    public static Bundle getMaskBundle(String value) {
-//        Bundle bundle = new Bundle();
-//        bundle.putString(Constants.SPKey.BUNDLE_KEY, value);
-//        return bundle;
-//    }
 
     /**
      * 获取setting模块音乐默认选项

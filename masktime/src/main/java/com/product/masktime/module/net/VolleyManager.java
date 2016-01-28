@@ -9,10 +9,10 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.product.common.utils.LogUtils;
 import com.product.masktime.BaseApplication;
 import com.product.masktime.common.Constants;
 import com.product.masktime.config.LruBitmapCache;
-import com.product.common.utils.LogUtils;
 import com.squareup.okhttp.OkHttpClient;
 
 /**
@@ -76,7 +76,8 @@ public class VolleyManager {
         return mRequestQueue;
     }
 
-//    public ImageLoader getImageLoader() {
-//        return mImageLoader;
-//    }
+    @Deprecated
+    public ImageLoader getImageLoader() {
+        return mImageLoader;
+    }
 }
