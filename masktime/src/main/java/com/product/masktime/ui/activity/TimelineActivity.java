@@ -13,7 +13,7 @@ import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.common.interfaces.IInit;
 import com.product.masktime.db.DBRecordHelper;
-import com.product.masktime.db.Record;
+import com.product.masktime.db.gen.Record;
 import com.product.masktime.ui.adapter.TimelineGroupAdapter;
 import com.product.masktime.ui.base.BaseListActivity;
 

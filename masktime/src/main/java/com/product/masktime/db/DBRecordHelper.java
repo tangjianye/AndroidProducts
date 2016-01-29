@@ -2,6 +2,9 @@ package com.product.masktime.db;
 
 import android.content.Context;
 
+import com.product.masktime.db.gen.Record;
+import com.product.masktime.db.gen.RecordDao;
+
 import java.util.List;
 
 import de.greenrobot.dao.query.Query;

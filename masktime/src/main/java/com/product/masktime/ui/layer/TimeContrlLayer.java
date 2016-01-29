@@ -13,7 +13,7 @@ import com.product.common.utils.LogUtils;
 import com.product.common.utils.TextUtils;
 import com.product.masktime.R;
 import com.product.masktime.db.DBRecordHelper;
-import com.product.masktime.db.Record;
+import com.product.masktime.db.gen.Record;
 import com.product.masktime.ui.notification.Notify;
 import com.product.masktime.ui.view.CircularSeekBar;
 

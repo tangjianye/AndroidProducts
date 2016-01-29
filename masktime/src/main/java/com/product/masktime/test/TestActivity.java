@@ -17,8 +17,8 @@ import android.widget.TextView;
 
 import com.product.masktime.R;
 import com.product.masktime.db.DBManager;
-import com.product.masktime.db.Note;
-import com.product.masktime.db.NoteDao;
+import com.product.masktime.db.gen.Note;
+import com.product.masktime.db.gen.NoteDao;
 
 import java.text.DateFormat;
 import java.util.Date;

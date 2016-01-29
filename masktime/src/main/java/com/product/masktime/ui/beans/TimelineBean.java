@@ -1,6 +1,6 @@
 package com.product.masktime.ui.beans;
 
-import com.product.masktime.db.Record;
+import com.product.masktime.db.gen.Record;
 
 /**
  * Entity mapped to table RECORD.

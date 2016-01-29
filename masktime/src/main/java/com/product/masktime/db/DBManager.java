@@ -5,6 +5,10 @@ import android.database.sqlite.SQLiteDatabase;
 
 import com.product.masktime.BaseApplication;
 import com.product.masktime.config.GlobalSetting;
+import com.product.masktime.db.gen.DaoMaster;
+import com.product.masktime.db.gen.DaoSession;
+import com.product.masktime.db.gen.NoteDao;
+import com.product.masktime.db.gen.RecordDao;
 
 /**
  * DBManager 数据库统一管理类<br> 负责数据库表的统一创建，获取和销毁的动作。不负责具体表的添删改查操作。

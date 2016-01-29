@@ -4,9 +4,9 @@ import android.content.Context;
 import android.util.Log;
 
 import com.product.masktime.db.DBManager;
-import com.product.masktime.db.Note;
-import com.product.masktime.db.NoteDao;
-import com.product.masktime.db.RecordDao;
+import com.product.masktime.db.gen.Note;
+import com.product.masktime.db.gen.NoteDao;
+import com.product.masktime.db.gen.RecordDao;
 
 import java.util.List;
 

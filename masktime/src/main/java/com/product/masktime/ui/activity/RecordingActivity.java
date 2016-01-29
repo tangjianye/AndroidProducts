@@ -24,7 +24,7 @@ import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.common.interfaces.IInit;
 import com.product.masktime.db.DBRecordHelper;
-import com.product.masktime.db.Record;
+import com.product.masktime.db.gen.Record;
 import com.product.masktime.module.net.API;
 import com.product.masktime.module.net.VolleyManager;
 import com.product.masktime.module.net.request.GsonRequest;

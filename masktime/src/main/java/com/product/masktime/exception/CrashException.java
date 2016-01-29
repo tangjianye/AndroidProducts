@@ -19,6 +19,7 @@ import java.lang.Thread.UncaughtExceptionHandler;
  */
 public class CrashException implements UncaughtExceptionHandler {
     public static final String TAG = "CrashException";
+    private static final long RESTART_DELAY = 100L;
     private static CrashException sInstance;
     private Context mContext;
     private UncaughtExceptionHandler mDefaultHandler;
@@ -64,11 +65,10 @@ public class CrashException implements UncaughtExceptionHandler {
 
         // 重新启动应用
         int requestCode = 0;
-        PendingIntent pIntent = PendingIntent.getActivity(mContext,
-                requestCode, new Intent(mContext, SplashActivity.class),
-                PendingIntent.FLAG_CANCEL_CURRENT);
+        PendingIntent pIntent = PendingIntent.getActivity(mContext, requestCode,
+                new Intent(mContext, SplashActivity.class), PendingIntent.FLAG_CANCEL_CURRENT);
         AlarmManager mgr = (AlarmManager) mContext.getSystemService(Context.ALARM_SERVICE);
-        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + 100, pIntent);
+        mgr.set(AlarmManager.RTC, System.currentTimeMillis() + RESTART_DELAY, pIntent);
 
         ((BaseApplication) mContext.getApplicationContext()).exitApp(true);
         // AppManager.getInstance().appExit(mContext, true);
