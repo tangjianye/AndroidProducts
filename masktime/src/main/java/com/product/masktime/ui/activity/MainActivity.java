@@ -36,6 +36,23 @@ public class MainActivity extends BaseActivity implements IInit, View.OnClickLis
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        // MobclickAgent.onResume(this);
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // MobclickAgent.onPause(this);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
     public void initDatas() {
 
     }
@@ -56,23 +73,6 @@ public class MainActivity extends BaseActivity implements IInit, View.OnClickLis
         findViewById(R.id.txt_record).setOnClickListener(this);
         findViewById(R.id.txt_store).setOnClickListener(this);
         findViewById(R.id.txt_setting).setOnClickListener(this);
-    }
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        // MobclickAgent.onResume(this);
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        // MobclickAgent.onPause(this);
     }
 
     @Override
@@ -113,4 +113,5 @@ public class MainActivity extends BaseActivity implements IInit, View.OnClickLis
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }

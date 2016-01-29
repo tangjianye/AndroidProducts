@@ -57,8 +57,13 @@ public class AlbumXListActivity extends BaseTitleActivity implements IInit, Adap
     }
 
     @Override
-    protected void setContentLayer() {
-        setContentView(R.layout.activity_xlist_album);
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
     }
 
     @Override
@@ -67,13 +72,8 @@ public class AlbumXListActivity extends BaseTitleActivity implements IInit, Adap
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
+    protected void setContentLayer() {
+        setContentView(R.layout.activity_xlist_album);
     }
 
     @Override

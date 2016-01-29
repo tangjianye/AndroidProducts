@@ -42,11 +42,6 @@ public class CommunityActivity extends BaseActivity implements IInit, View.OnCli
     }
 
     @Override
-    protected void onDestroy() {
-        super.onDestroy();
-    }
-
-    @Override
     protected void onResume() {
         super.onResume();
     }
@@ -54,6 +49,11 @@ public class CommunityActivity extends BaseActivity implements IInit, View.OnCli
     @Override
     protected void onPause() {
         super.onPause();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
     }
 
     @Override
