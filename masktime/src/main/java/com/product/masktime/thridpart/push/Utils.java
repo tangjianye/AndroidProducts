@@ -12,6 +12,7 @@ import android.preference.PreferenceManager;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class Utils {
     public static final String TAG = "PushDemoActivity";
     public static final String RESPONSE_METHOD = "method";

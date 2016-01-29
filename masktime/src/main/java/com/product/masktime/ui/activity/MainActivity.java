@@ -14,7 +14,7 @@ import com.product.masktime.utils.CommonUtils;
 
 public class MainActivity extends BaseActivity implements IInit, View.OnClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
-    private static final long EXIT_INTERVAL = 2000;
+    private static final long EXIT_INTERVAL = 2000L;
     private long mExitTime = 0;
 
     @Override

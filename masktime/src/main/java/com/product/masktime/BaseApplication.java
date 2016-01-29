@@ -2,6 +2,7 @@ package com.product.masktime;
 
 import android.app.Application;
 
+import com.product.common.utils.LogUtils;
 import com.product.masktime.common.AppManager;
 import com.product.masktime.db.DBManager;
 import com.product.masktime.exception.CrashException;
@@ -22,14 +23,13 @@ public class BaseApplication extends Application {
     }
 
     private void init() {
+        LogUtils.init(BuildConfig.LOG_DEBUG, BuildConfig.APPLICATION_ID);
         CrashException.getInstance().init(this);
+
         DBManager.getInstance().init(this);
         ImageLoaderManager.getInstance().init(this);
         VolleyManager.getInstance().init(this);
         Notify.getInstance().init(this);
-
-        // CommonUtils.getChannel(this);
-        // CommonUtils.getAppInfo(this);
 
         StatisticsProxy.getInstance().init(this);
         UpdateProxy.getInstance().init(this);
