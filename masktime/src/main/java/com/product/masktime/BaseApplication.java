@@ -5,9 +5,9 @@ import android.app.Application;
 import com.product.common.utils.LogUtils;
 import com.product.masktime.common.AppManager;
 import com.product.masktime.db.DBManager;
-import com.product.masktime.exception.CrashException;
-import com.product.masktime.module.uil.ImageLoaderManager;
+import com.product.masktime.module.fresco.FrescoManager;
 import com.product.masktime.module.net.VolleyManager;
+import com.product.masktime.module.uil.ImageLoaderManager;
 import com.product.masktime.thridpart.statistics.StatisticsProxy;
 import com.product.masktime.thridpart.update.UpdateProxy;
 import com.product.masktime.ui.notification.Notify;
@@ -34,10 +34,11 @@ public class BaseApplication extends Application {
 
     private void init() {
         LogUtils.init(BuildConfig.LOG_DEBUG, BuildConfig.APPLICATION_ID);
-        CrashException.getInstance().init(this);
+        // CrashException.getInstance().init(this);
 
         DBManager.getInstance().init(this);
         ImageLoaderManager.getInstance().init(this);
+        FrescoManager.getInstance().init(this);
         VolleyManager.getInstance().init(this);
         Notify.getInstance().init(this);
 
@@ -47,6 +48,9 @@ public class BaseApplication extends Application {
 
     public void exitApp(boolean isKillProcess) {
         MobclickAgent.onKillProcess(this);
+        ImageLoaderManager.getInstance().shutDown();
+        FrescoManager.getInstance().shutDown();
+        VolleyManager.getInstance().shutDown();
         AppManager.getInstance().appExit(this, isKillProcess);
     }
 

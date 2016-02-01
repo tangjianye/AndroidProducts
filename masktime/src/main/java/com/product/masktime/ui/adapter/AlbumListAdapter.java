@@ -5,12 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.product.masktime.R;
 import com.product.masktime.module.net.response.AlbumItem;
 import com.product.masktime.ui.layer.BannerLayer;
+import com.product.masktime.ui.view.AdImageView;
 import com.product.masktime.ui.view.AutoScrollBanner;
 import com.product.masktime.utils.CommonUtils;
 
@@ -88,7 +88,7 @@ public class AlbumListAdapter extends BaseAdapter {
                 if (convertView == null) {
                     holder = new AlbumViewHolder();
                     convertView = LayoutInflater.from(mContext).inflate(R.layout.listitem_album, null);
-                    holder.image = (ImageView) convertView.findViewById(R.id.nt_image);
+                    holder.image = (AdImageView) convertView.findViewById(R.id.nt_image);
                     holder.title = (TextView) convertView.findViewById(R.id.txt_title);
                     convertView.setTag(holder);
                 } else {
@@ -111,7 +111,7 @@ public class AlbumListAdapter extends BaseAdapter {
     }
 
     static class AlbumViewHolder {
-        public ImageView image;
+        public AdImageView image;
         public TextView title;
     }
 }

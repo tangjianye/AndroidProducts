@@ -8,17 +8,18 @@ import android.os.Bundle;
 import android.widget.ImageView;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.product.common.utils.AppUtils;
 import com.product.common.utils.FileUtils;
 import com.product.common.utils.LogUtils;
 import com.product.common.utils.SDCardUtils;
 import com.product.common.utils.SPUtils;
-import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.config.GlobalSetting;
-import com.product.masktime.module.uil.ImageLoaderManager;
+import com.product.masktime.module.fresco.FrescoManager;
 import com.product.masktime.module.net.API;
 import com.product.masktime.module.net.VolleyManager;
+import com.product.masktime.module.uil.ImageLoaderManager;
 
 import java.io.Serializable;
 
@@ -71,26 +72,48 @@ public class CommonUtils {
     /**
      * 设置图片显示
      *
-     * @param context
      * @param view
-     * @param url
+     * @param uri
      */
     @Deprecated
-    public static void setImageUrl(Context context, NetworkImageView view, String url) {
-        view.setDefaultImageResId(R.drawable.place_holder);
-        view.setErrorImageResId(R.drawable.place_holder);
-        view.setImageUrl(API.getPicUrl(url), VolleyManager.getInstance().getImageLoader());
+    public static void loadImage(NetworkImageView view, String uri) {
+        // view.setDefaultImageResId(R.drawable.place_holder);
+        // view.setErrorImageResId(R.drawable.place_holder);
+        view.setImageUrl(API.getPicUrl(uri), VolleyManager.getInstance().getImageLoader());
     }
 
     /**
      * 设置图片显示
      *
      * @param view
-     * @param url
+     * @param uri
      */
-    public static void loadImage(ImageView view, String url) {
-        ImageLoaderManager.getInstance().loadImage(view, API.getPicUrl(url));
+    @Deprecated
+    public static void loadImage(ImageView view, String uri) {
+        ImageLoaderManager.getInstance().loadImage(view, API.getPicUrl(uri));
     }
+
+    /**
+     * 设置图片显示
+     *
+     * @param view
+     * @param uri
+     */
+    public static void loadImage(SimpleDraweeView view, String uri) {
+        FrescoManager.getInstance().loadImage(view, API.getPicUrl(uri));
+    }
+
+//    /**
+//     * 设置广告图片显示
+//     *
+//     * @param view
+//     * @param uri
+//     */
+//    public static void loadImage(Context context, SimpleDraweeView view, String uri) {
+//        int width = ScreenUtils.getScreenWidth(context);
+//        int height = context.getResources().getDimensionPixelOffset(R.dimen.size100);
+//        FrescoManager.getInstance().loadImage(view, API.getPicUrl(uri), width, height);
+//    }
 
     /**
      * 设置播放信息

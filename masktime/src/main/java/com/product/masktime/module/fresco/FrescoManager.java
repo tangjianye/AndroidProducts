@@ -7,13 +7,10 @@ import android.net.Uri;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.controller.ControllerListener;
-import com.facebook.drawee.drawable.ProgressBarDrawable;
 import com.facebook.drawee.generic.GenericDraweeHierarchy;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
-import com.facebook.drawee.generic.RoundingParams;
 import com.facebook.drawee.interfaces.DraweeController;
 import com.facebook.drawee.view.SimpleDraweeView;
-import com.facebook.imagepipeline.common.ResizeOptions;
 import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 import com.product.common.utils.LogUtils;
@@ -51,30 +48,36 @@ public class FrescoManager {
         GenericDraweeHierarchy options = new GenericDraweeHierarchyBuilder(context.getResources())
                 .setPlaceholderImage(context.getResources().getDrawable(R.drawable.place_holder))
                 .setFailureImage(context.getResources().getDrawable(R.drawable.place_holder))
-                .setRoundingParams(RoundingParams.asCircle())
-                .setProgressBarImage(new ProgressBarDrawable())
+                        // .setRoundingParams(RoundingParams.asCircle())
+                        // .setProgressBarImage(new ProgressBarDrawable())
                 .build();
         return options;
     }
 
     public void loadImage(SimpleDraweeView view, String uri) {
-        loadImage(view, uri, mLoadingListener);
+        loadImage(view, uri, 0, 0, mLoadingListener);
     }
 
-    public void loadImage(SimpleDraweeView view, String uri, ControllerListener listener) {
+    @Deprecated
+    public void loadImage(SimpleDraweeView view, String uri, int width, int height) {
+        loadImage(view, uri, width, height, mLoadingListener);
+    }
+
+    public void loadImage(SimpleDraweeView view, String uri, int width, int height, ControllerListener listener) {
         view.setHierarchy(getDefaultOptions(sCtx));
-        ImageRequest imageRequest =
-                ImageRequestBuilder.newBuilderWithSource(Uri.parse(uri))
-                        .setResizeOptions(
-                                new ResizeOptions(view.getLayoutParams().width, view.getLayoutParams().height))
-                        .setProgressiveRenderingEnabled(true)
-                        .build();
+
+        ImageRequest imageRequest = ImageRequestBuilder.newBuilderWithSource(Uri.parse(uri))
+                // .setResizeOptions(new ResizeOptions(view.getLayoutParams().width, view.getLayoutParams().height))
+                .setProgressiveRenderingEnabled(true)
+                .build();
+
         DraweeController draweeController = Fresco.newDraweeControllerBuilder()
                 .setImageRequest(imageRequest)
                 .setOldController(view.getController())
                 .setControllerListener(listener)
-                .setAutoPlayAnimations(true)
+                .setAutoPlayAnimations(false)
                 .build();
+
         view.setController(draweeController);
     }
 

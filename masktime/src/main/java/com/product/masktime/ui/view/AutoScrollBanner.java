@@ -9,10 +9,10 @@ import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
+import com.product.common.utils.LogUtils;
 import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.common.interfaces.ICycle;
@@ -21,7 +21,6 @@ import com.product.masktime.ui.activity.WebViewActivity;
 import com.product.masktime.ui.adapter.BannerPagerAdapter;
 import com.product.masktime.ui.base.BaseActivity;
 import com.product.masktime.utils.CommonUtils;
-import com.product.common.utils.LogUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -212,7 +211,7 @@ public class AutoScrollBanner extends RelativeLayout implements ICycle {
         for (AlbumItem info : list) {
             view = LayoutInflater.from(mContext).inflate(R.layout.item_banner, null);
             // TextView title = (TextView) view.findViewById(R.id.txt_title);
-            ImageView image = (ImageView) view.findViewById(R.id.nt_image);
+            AdImageView image = (AdImageView) view.findViewById(R.id.nt_image);
             image.setTag(info);
             image.setOnClickListener(new OnClickListener() {
                 @Override

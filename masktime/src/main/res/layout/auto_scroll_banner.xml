@@ -7,7 +7,7 @@
     <com.product.masktime.ui.view.ScrollViewPager
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/android_height_xlarge" />
+        android:layout_height="@dimen/ad_image_view_height" />
 
     <RelativeLayout
         android:layout_width="match_parent"

@@ -12,7 +12,6 @@ import com.android.volley.toolbox.Volley;
 import com.product.common.utils.LogUtils;
 import com.product.masktime.BaseApplication;
 import com.product.masktime.common.Constants;
-import com.product.masktime.module.ConfigConstants;
 import com.squareup.okhttp.OkHttpClient;
 
 /**
@@ -44,17 +43,17 @@ public class VolleyManager {
         }
 
         sCtx = context;
-        if (sMemoryCache == null) {
-            sMemoryCache = new VolleyMemoryCache(ConfigConstants.MAX_MEMORY_CACHE_SIZE);
-        }
         if (sRequestQueue == null) {
             // getApplicationContext() is key, it keeps you from leaking the
             // Activity or BroadcastReceiver if someone passes one in.
             sRequestQueue = Volley.newRequestQueue(sCtx.getApplicationContext(), new OkHttpStack(new OkHttpClient()));
         }
-        if (sImageLoader == null) {
-            sImageLoader = new ImageLoader(sRequestQueue, sMemoryCache);
-        }
+//        if (sMemoryCache == null) {
+//            sMemoryCache = new VolleyMemoryCache(ConfigConstants.MAX_MEMORY_CACHE_SIZE);
+//        }
+//        if (sImageLoader == null) {
+//            sImageLoader = new ImageLoader(sRequestQueue, sMemoryCache);
+//        }
     }
 
     @NonNull
@@ -90,6 +89,8 @@ public class VolleyManager {
      * 释放图片资源
      */
     public void shutDown() {
-        sMemoryCache.clear();
+        if (null != sMemoryCache) {
+            sMemoryCache.clear();
+        }
     }
 }
