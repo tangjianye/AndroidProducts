@@ -15,12 +15,12 @@ public class GlobalSetting {
     /**
      * 当前app的运行模式
      */
-    public final boolean DEBUG = true;
+    // public final boolean DEBUG = true;
 
     /**
      * 当前app的是否写Log
      */
-    public boolean mIsLogined = false;
+    // public boolean mIsLogined = false;
 
 //    /**
 //     * 音乐播放数据 assects

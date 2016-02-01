@@ -16,7 +16,7 @@ import com.product.common.utils.SPUtils;
 import com.product.masktime.R;
 import com.product.masktime.common.Constants;
 import com.product.masktime.config.GlobalSetting;
-import com.product.masktime.module.image.ImageLoaderManager;
+import com.product.masktime.module.uil.ImageLoaderManager;
 import com.product.masktime.module.net.API;
 import com.product.masktime.module.net.VolleyManager;
 

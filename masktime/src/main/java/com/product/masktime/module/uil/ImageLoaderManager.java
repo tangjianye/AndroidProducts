@@ -1,5 +1,6 @@
-package com.product.masktime.module.image;
+package com.product.masktime.module.uil;
 
+import android.app.Application;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.view.View;
@@ -7,7 +8,6 @@ import android.widget.ImageView;
 
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
-import com.product.masktime.BaseApplication;
 import com.product.common.utils.LogUtils;
 
 /**
@@ -30,7 +30,7 @@ public class ImageLoaderManager {
     }
 
     public void init(Context context) {
-        if (!(context instanceof BaseApplication)) {
+        if (!(context instanceof Application)) {
             throw new AssertionError();
         }
 
@@ -38,15 +38,19 @@ public class ImageLoaderManager {
         ImageLoaderConfig.initImageLoader(context, null);
     }
 
-    public void loadImage(ImageView imageView, String uri) {
-        ImageLoaderConfig.getImageLoader().displayImage(uri, imageView, ImageLoaderConfig.getDefaultOptions(), loadingListener);
+    public void loadImage(ImageView view, String uri) {
+        loadImage(view, uri, mLoadingListener);
     }
 
-    public void loadImage(ImageView imageView, String uri, ImageLoadingListener listener) {
-        ImageLoaderConfig.getImageLoader().displayImage(uri, imageView, ImageLoaderConfig.getDefaultOptions(), listener);
+    public void loadImage(ImageView view, String uri, ImageLoadingListener listener) {
+        ImageLoaderConfig.getImageLoader().displayImage(uri, view, ImageLoaderConfig.getDefaultOptions(), listener);
     }
 
-    private ImageLoadingListener loadingListener = new ImageLoadingListener() {
+    public void shutDown() {
+        ImageLoaderConfig.getImageLoader().clearMemoryCache();
+    }
+
+    private ImageLoadingListener mLoadingListener = new ImageLoadingListener() {
         @Override
         public void onLoadingStarted(String imageUri, View view) {
             LogUtils.i(TAG, "imageUri = " + imageUri);

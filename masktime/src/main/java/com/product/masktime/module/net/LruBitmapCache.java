@@ -1,4 +1,4 @@
-package com.product.masktime.config;
+package com.product.masktime.module.net;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -11,6 +11,7 @@ import com.android.volley.toolbox.ImageLoader;
  * 图片Lru缓存
  * Created by tangjy on 2015/3/5.
  */
+@Deprecated
 public class LruBitmapCache extends LruCache<String, Bitmap> implements ImageLoader.ImageCache {
     public LruBitmapCache(int maxSize) {
         super(maxSize);

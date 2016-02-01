@@ -1,4 +1,4 @@
-package com.product.masktime.module.image;
+package com.product.masktime.module.uil;
 
 
 import android.content.Context;
@@ -13,6 +13,7 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.product.masktime.R;
 
 public class ImageLoaderConfig {
+    private static ImageLoader sImageLoader;
 
     public static DisplayImageOptions getDefaultOptions() {
         DisplayImageOptions options = new DisplayImageOptions.Builder()
@@ -70,6 +71,9 @@ public class ImageLoaderConfig {
     }
 
     public static ImageLoader getImageLoader() {
-        return ImageLoader.getInstance();
+        if (null == sImageLoader) {
+            sImageLoader = ImageLoader.getInstance();
+        }
+        return sImageLoader;
     }
 }

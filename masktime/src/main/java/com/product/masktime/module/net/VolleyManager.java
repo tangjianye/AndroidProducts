@@ -12,7 +12,7 @@ import com.android.volley.toolbox.Volley;
 import com.product.common.utils.LogUtils;
 import com.product.masktime.BaseApplication;
 import com.product.masktime.common.Constants;
-import com.product.masktime.config.LruBitmapCache;
+import com.product.masktime.module.ConfigConstants;
 import com.squareup.okhttp.OkHttpClient;
 
 /**
@@ -24,8 +24,9 @@ public class VolleyManager {
 
     private static Context sCtx;
     private static VolleyManager sINSTANTCE;
-    private static RequestQueue mRequestQueue;
-    private static ImageLoader mImageLoader;
+    private static RequestQueue sRequestQueue;
+    private static ImageLoader sImageLoader;
+    private static VolleyMemoryCache sMemoryCache;
 
     private VolleyManager() {
     }
@@ -43,41 +44,52 @@ public class VolleyManager {
         }
 
         sCtx = context;
-        if (mRequestQueue == null) {
+        if (sMemoryCache == null) {
+            sMemoryCache = new VolleyMemoryCache(ConfigConstants.MAX_MEMORY_CACHE_SIZE);
+        }
+        if (sRequestQueue == null) {
             // getApplicationContext() is key, it keeps you from leaking the
             // Activity or BroadcastReceiver if someone passes one in.
-            mRequestQueue = Volley.newRequestQueue(sCtx.getApplicationContext(), new OkHttpStack(new OkHttpClient()));
+            sRequestQueue = Volley.newRequestQueue(sCtx.getApplicationContext(), new OkHttpStack(new OkHttpClient()));
         }
-        if (mImageLoader == null) {
-            mImageLoader = new ImageLoader(mRequestQueue, new LruBitmapCache(LruBitmapCache.getCacheSize(sCtx)));
+        if (sImageLoader == null) {
+            sImageLoader = new ImageLoader(sRequestQueue, sMemoryCache);
         }
     }
 
     @NonNull
     private DefaultRetryPolicy getRetryPolicy() {
-        return new DefaultRetryPolicy(Constants.REQUEST_TIMEOUT_MS, Constants.REQUEST_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        return new DefaultRetryPolicy(Constants.REQUEST_TIMEOUT_MS,
+                Constants.REQUEST_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
     }
 
     public <T> RequestQueue addToRequestQueue(Request<T> req, String tag) {
         req.setRetryPolicy(getRetryPolicy());
         req.setTag(TextUtils.isEmpty(tag) ? TAG : tag);
         LogUtils.i(TAG, "Adding request to queue = " + req.getUrl());
-        mRequestQueue.add(req);
-        return mRequestQueue;
+        sRequestQueue.add(req);
+        return sRequestQueue;
     }
 
     public void cancelAll(String tag) {
-        if (mRequestQueue != null) {
-            mRequestQueue.cancelAll(tag);
+        if (sRequestQueue != null) {
+            sRequestQueue.cancelAll(tag);
         }
     }
 
     public RequestQueue getRequestQueue() {
-        return mRequestQueue;
+        return sRequestQueue;
     }
 
     @Deprecated
     public ImageLoader getImageLoader() {
-        return mImageLoader;
+        return sImageLoader;
+    }
+
+    /**
+     * 释放图片资源
+     */
+    public void shutDown() {
+        sMemoryCache.clear();
     }
 }

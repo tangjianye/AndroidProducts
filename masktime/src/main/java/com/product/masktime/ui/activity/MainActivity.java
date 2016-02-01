@@ -86,7 +86,7 @@ public class MainActivity extends BaseActivity implements IInit, View.OnClickLis
                 // DBManager.getInstance().deleteAll();
                 break;
             case R.id.txt_store:
-                // openActivity(AlbumActivity.class);
+                openActivity(AlbumActivity.class);
                 break;
             case R.id.txt_record:
                 openActivity(TimelineActivity.class);

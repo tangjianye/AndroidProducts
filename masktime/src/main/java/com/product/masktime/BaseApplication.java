@@ -6,7 +6,7 @@ import com.product.common.utils.LogUtils;
 import com.product.masktime.common.AppManager;
 import com.product.masktime.db.DBManager;
 import com.product.masktime.exception.CrashException;
-import com.product.masktime.module.image.ImageLoaderManager;
+import com.product.masktime.module.uil.ImageLoaderManager;
 import com.product.masktime.module.net.VolleyManager;
 import com.product.masktime.thridpart.statistics.StatisticsProxy;
 import com.product.masktime.thridpart.update.UpdateProxy;
@@ -19,7 +19,17 @@ public class BaseApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        initStetho();
         init();
+    }
+
+    private void initStetho() {
+//        Stetho.initialize(Stetho.newInitializerBuilder(this)
+//                .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
+//                .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
+//                .build());
+
+//        Stetho.initializeWithDefaults(this);
     }
 
     private void init() {
