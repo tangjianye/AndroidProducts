@@ -1,2 +1,2 @@
-include ':volley', ':AndroidPullToRefresh', ':AndroidDaoGenerator', ':AndroidCommon'
+include ':volley', ':AndroidPullToRefresh', ':AndroidDaoGenerator', ':AndroidCommon', ':colorfulnote'
 include ':masktime'
