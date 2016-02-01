@@ -1,5 +1,7 @@
 <resources>
     <!-- Others -->
+    <string name="app_name">面膜时间</string>
+
     <string name="main_community">发现</string>
     <string name="main_record">日记</string>
     <string name="main_album">心得</string>
