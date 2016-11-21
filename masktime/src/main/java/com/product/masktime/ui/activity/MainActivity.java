@@ -79,7 +79,7 @@ public class MainActivity extends BaseActivity implements IInit, View.OnClickLis
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.txt_community:
-                // openActivity(CommunityActivity.class);
+                 openActivity(CommunityActivity.class);
                 // openActivity(BaseList2Activity.class);
                 // openActivity(TestActivity.class);
                 // Notify.getInstance().show(this);
@@ -92,7 +92,7 @@ public class MainActivity extends BaseActivity implements IInit, View.OnClickLis
                 openActivity(TimelineActivity.class);
                 break;
             case R.id.txt_setting:
-                // openActivity(SettingActivity.class);
+                 openActivity(SettingActivity.class);
                 break;
             default:
                 break;

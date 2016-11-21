@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidProductCommon/AndroidCommon.iml" filepath="$PROJECT_DIR$/AndroidProductCommon/AndroidCommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidCommon/AndroidCommon.iml" filepath="$PROJECT_DIR$/AndroidCommon/AndroidCommon.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidDaoGenerator/AndroidDaoGenerator.iml" filepath="$PROJECT_DIR$/AndroidDaoGenerator/AndroidDaoGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidProducts.iml" filepath="$PROJECT_DIR$/AndroidProducts.iml" />
       <module fileurl="file://$PROJECT_DIR$/AndroidPullToRefresh/AndroidPullToRefresh.iml" filepath="$PROJECT_DIR$/AndroidPullToRefresh/AndroidPullToRefresh.iml" />

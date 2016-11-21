@@ -66,24 +66,15 @@
       <sourceFolder url="file://$MODULE_DIR$/../AndroidCommon/src/androidTest/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../AndroidCommon/src/androidTest/jni" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/../AndroidCommon/src/androidTest/rs" isTestSource="true" />
+      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/assets" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/bundles" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/classes" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/coverage-instrumented-classes" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/dependency-cache" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/dex" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/dex-cache" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/jars" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/jars" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/incremental" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/jacoco" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/javaResources" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/libs" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/lint" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/manifests" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/ndk" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/pre-dexed" />
-      <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/proguard" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/res" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/rs" />
       <excludeFolder url="file://$MODULE_DIR$/../AndroidCommon/build/intermediates/symbols" />
@@ -92,9 +83,9 @@
     </content>
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="gson-2.2.4" level="project" />
-    <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
+    <orderEntry type="library" exported="" name="appcompat-v7-21.0.3" level="project" />
     <orderEntry type="library" exported="" name="support-v4-21.0.3" level="project" />
+    <orderEntry type="library" exported="" name="support-annotations-21.0.3" level="project" />
   </component>
 </module>
