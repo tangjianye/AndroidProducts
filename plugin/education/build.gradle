@@ -1,0 +1,69 @@
+//apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
+apply plugin: 'org.greenrobot.greendao'
+//apply from: '../../config/fat-aar.gradle'
+
+greendao {
+    schemaVersion 1
+    targetGenDir 'src/main/java'
+    daoPackage 'cn.aorise.education.db'
+}
+
+/**
+ * 1. gradlew clean
+ * 2. gradlew build /assembleRelease
+ */
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        def BASE_URL = "BASE_URL"
+        release {
+            buildConfigField "String", BASE_URL, '"https://api.douban.com/"'
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //signingConfig signingConfigs.release
+        }
+        debug {
+            buildConfigField "String", BASE_URL, '"https://api.douban.com/"'
+            minifyEnabled false
+            shrinkResources false
+            zipAlignEnabled false
+            //signingConfig signingConfigs.release
+        }
+    }
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile project(':commonLib')
+    // compile 'cn.aorise:common:1.0.0'
+
+}
+
+
+// apply from: '../../config/maven-education.gradle'

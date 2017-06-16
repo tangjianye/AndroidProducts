@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">AndroidSample</string>
+    <string name="sample_title_activity_splash">启动页</string>
+    <string name="sample_title_activity_about">关于</string>
+    <string name="sample_title_activity_main">首页</string>
+    <string name="sample_title_activity_image">网络图片</string>
+    <string name="sample_title_activity_net">网络数据</string>
+    <string name="sample_title_activity_db">数据库</string>
+    <string name="sample_title_activity_list_db">上下拉列表(DB)</string>
+    <string name="sample_title_activity_list_net">上下拉列表(Net)</string>
+    <string name="sample_title_activity_webview">内置浏览器页面</string>
+    <string name="sample_title_activity_crash">异常退出</string>
+</resources>

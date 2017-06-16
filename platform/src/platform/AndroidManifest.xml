@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.aorise.platform">
+
+    <application>
+        <activity
+            android:name="cn.aorise.platform.ui.activity.MainActivity"
+            android:label="@string/platform_title_activity_main" />
+    </application>
+
+</manifest>

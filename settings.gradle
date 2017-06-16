@@ -1,0 +1,6 @@
+include ':commonLib', ':platform'
+
+include ':plugin:petition'
+include ':plugin:education'
+include ':plugin:hospital'
+include ':plugin:sample'

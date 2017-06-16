@@ -1,0 +1,11 @@
+// 添加到Bintray仓库
+apply plugin: 'com.novoda.bintray-release'
+
+publish {
+    userOrg = 'aorise-android-group'    // 用户名/organization
+    groupId = 'cn.aorise'               // jcenter上的路径
+    artifactId = 'android-common'       // 项目名称
+    publishVersion = android.defaultConfig.versionName
+    desc = 'Aorise Technology Co., Ltd. android public library'
+    website = 'https://github.com/novoda/bintray-release'
+}

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">教育</string>
+    <string name="education_action_edit">编辑</string>
+
+    <string name="education_title_activity_splash">启动页</string>
+
+    <string name="education_title_activity_main">首页</string>
+    <string name="education_tab_label_home">应用</string>
+    <string name="education_tab_label_notice">通知</string>
+    <string name="education_tab_label_chat">互联</string>
+    <string name="education_tab_label_personal">我的</string>
+
+    <string name="education_title_activity_contacts">联系人</string>
+
+    <string name="education_title_activity_about">关于</string>
+</resources>
