@@ -5,28 +5,19 @@
       <GradleProjectSettings>
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleHome" value="$APPLICATION_HOME_DIR$/gradle/gradle-2.14.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/AndroidCommon" />
-            <option value="$PROJECT_DIR$/AndroidDaoGenerator" />
-            <option value="$PROJECT_DIR$/AndroidPullToRefresh" />
-            <option value="$PROJECT_DIR$/colorfulnote" />
-            <option value="$PROJECT_DIR$/masktime" />
-            <option value="$PROJECT_DIR$/volley" />
+            <option value="$PROJECT_DIR$/platform" />
+            <option value="$PROJECT_DIR$/plugin" />
+            <option value="$PROJECT_DIR$/plugin/education" />
+            <option value="$PROJECT_DIR$/plugin/hospital" />
+            <option value="$PROJECT_DIR$/plugin/petition" />
+            <option value="$PROJECT_DIR$/plugin/sample" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/AndroidCommon" />
-            <option value="$PROJECT_DIR$/AndroidDaoGenerator" />
-            <option value="$PROJECT_DIR$/AndroidPullToRefresh" />
-            <option value="$PROJECT_DIR$/colorfulnote" />
-            <option value="$PROJECT_DIR$/masktime" />
-            <option value="$PROJECT_DIR$/volley" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>

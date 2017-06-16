@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/aorise_include_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/petition_edf2f6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_200dp"
+                    android:layout_gravity="top"
+                    android:layout_marginLeft="@dimen/petition_10dp"
+                    android:layout_marginRight="@dimen/petition_10dp"
+                    android:layout_marginTop="@dimen/petition_10dp"
+                    android:background="@drawable/petition_b_bos"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lineSpacingExtra="@dimen/petition_10dp"
+                    android:maxLines="20"
+                    android:paddingBottom="@dimen/petition_10dp"
+                    android:paddingLeft="@dimen/petition_10dp"
+                    android:paddingRight="@dimen/petition_10dp"
+                    android:paddingTop="@dimen/petition_10dp"
+                    android:textColor="@color/petition_565656"
+                    android:textSize="@dimen/petition_12dp" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_44dp"
+                    android:layout_marginBottom="@dimen/petition_138dp"
+                    android:layout_marginLeft="@dimen/petition_10dp"
+                    android:layout_marginRight="@dimen/petition_10dp"
+                    android:layout_marginTop="@dimen/petition_57dp"
+                    android:background="@color/petition_0461bc">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/petition_commit_name"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_14dp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

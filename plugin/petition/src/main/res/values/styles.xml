@@ -1,0 +1,41 @@
+<resources>
+
+    <style name="PetitionCustomTabLayout" parent="Widget.Design.TabLayout">
+        <!--<item name="tabIndicatorColor">@color/blue</item>-->
+        <item name="tabIndicatorHeight">0dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabBackground">@color/colorPrimary</item>
+        <!--<item name="tabSelectedTextColor">@color/royalblue</item>-->
+        <!--<item name="android:textSize">@dimen/font_size_middle</item>-->
+        <!--<item name="android:textColor">@color/grey</item>-->
+        <item name="textAllCaps">true</item>
+    </style>
+    <style name="All.theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="Petition_checkbox" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+    <!-- 竖直分割线 -->
+    <style name="VerticalDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <!-- 水平分割线 -->
+    <style name="horizontalDivider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/grey</item>
+    </style>
+
+    <style name="popwin_anim_style">
+        <item name="android:windowEnterAnimation">@anim/zoom_enter</item>
+        <item name="android:windowExitAnimation">@anim/zoom_exit</item>
+    </style>
+</resources>

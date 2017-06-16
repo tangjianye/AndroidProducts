@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/petition_edf2f6"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_55dp"
+            android:background="@color/petition_status_color"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_cancle"
+                android:layout_width="@dimen/aorise_size50"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/petition_10dp">
+
+                <TextView
+                    android:id="@+id/textView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/aorise_dialog_cancel"
+                    android:textColor="@color/petition_ffffff"
+                    android:textSize="@dimen/petition_11dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petition_32dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/petition_10dp"
+                android:layout_toLeftOf="@+id/rl_cancle"
+                android:layout_toStartOf="@+id/rl_cancle"
+                android:background="@drawable/editnormal">
+
+                <ImageView
+                    android:id="@+id/imageView21"
+                    android:layout_width="@dimen/petition_12dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/petition_found_01" />
+
+                <EditText
+                    android:id="@+id/edt_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="@dimen/petition_20dp"
+                    android:layout_marginRight="@dimen/petition_20dp"
+                    android:background="@null"
+                    android:ems="10"
+                    android:hint="请输入搜索内容"
+                    android:imeOptions="actionSearch"
+                    android:inputType="textPersonName"
+                    android:singleLine="true"
+                    android:textColor="@color/petition_aeaeae"
+                    android:textSize="@dimen/petition_11dp" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_clear"
+                android:layout_width="@dimen/petition_7dp"
+                android:layout_height="@dimen/petition_7dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/petition_6dp"
+                android:layout_toLeftOf="@+id/rl_cancle"
+                android:layout_toStartOf="@+id/rl_cancle"
+                app:srcCompat="@drawable/petition_clear" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_55dp"
+            android:background="@color/petition_status_color"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_petition_return"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="@dimen/petition_22dp"
+                    android:layout_height="@dimen/petition_22dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/petition_14dp"
+                    app:srcCompat="@drawable/petition_return" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/petition_guide_name_01"
+                    android:textColor="@color/petition_ffffff" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_petition_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:id="@+id/imageView20"
+                    android:layout_width="@dimen/petition_22dp"
+                    android:layout_height="@dimen/petition_22dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/petition_14dp"
+                    app:srcCompat="@drawable/petition_found" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <cn.aorise.petition.common.commenrefresh.RefreshAndLoadMoreView
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/petition_7dp">
+
+            <cn.aorise.petition.common.commenrefresh.LoadMoreListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/petition_ffffff"
+                android:divider="@null"
+                android:focusable="false"
+                android:longClickable="false"
+                android:scrollbars="none" />
+        </cn.aorise.petition.common.commenrefresh.RefreshAndLoadMoreView>
+    </LinearLayout>
+</layout>

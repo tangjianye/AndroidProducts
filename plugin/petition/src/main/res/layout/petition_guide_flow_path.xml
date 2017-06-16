@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/aorise_include_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_44dp"
+                    android:background="@color/petition_status_color">
+
+                    <LinearLayout
+                        android:layout_width="219dp"
+                        android:layout_height="@dimen/petition_27dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_has_answer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/petition_left_02">
+
+                            <TextView
+                                android:id="@+id/txt_has_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/petition_guide_flow_path_01"
+                                android:textColor="@color/petition_status_color"
+                                android:textSize="@dimen/petition_12dp" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_not_answer"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/petition_right_01">
+
+                            <TextView
+                                android:id="@+id/txt_not_answer"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="false"
+                                android:layout_alignParentStart="false"
+                                android:layout_alignParentTop="false"
+                                android:layout_centerHorizontal="true"
+                                android:layout_centerVertical="true"
+                                android:text="@string/petition_guide_flow_path_02"
+                                android:textColor="@color/petition_ffffff"
+                                android:textSize="@dimen/petition_12dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageView22"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/petition_20dp"
+                    android:layout_marginTop="@dimen/petition_20dp"
+                    android:visibility="visible"
+                    app:srcCompat="@drawable/petition_guide_flow_path_02" />
+
+                <ImageView
+                    android:id="@+id/imageView23"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/petition_20dp"
+                    android:layout_marginTop="@dimen/petition_20dp"
+                    android:visibility="gone"
+                    app:srcCompat="@drawable/petition_guide_flow_path_01" />
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</layout>

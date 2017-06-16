@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/aorise_include_toolbar" />
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_47dp"
+            android:background="@color/petition_ffffff">
+
+            <TextView
+                android:id="@+id/textView39"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/petition_32dp"
+                android:text="@string/petition_phone_number"
+                android:textColor="@color/petition_565656" />
+
+            <EditText
+                android:id="@+id/edt_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/textView511"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/petition_53dp"
+                android:layout_toEndOf="@+id/textView39"
+                android:layout_toLeftOf="@+id/imageView19"
+                android:layout_toRightOf="@+id/textView39"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="@string/petition_hint_06"
+                android:textColor="@color/petition_0461bc"
+                android:textColorHint="@color/petition_aeaeae"
+                android:textSize="@dimen/petition_10dp" />
+
+            <TextView
+                android:id="@+id/textView511"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petition_1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/petition_10dp"
+                android:background="@color/petition_aeaeae" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_verification_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_47dp"
+            android:background="@color/petition_ffffff">
+
+            <TextView
+                android:id="@+id/txt_verification"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/petition_24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/petition_10dp"
+                android:background="@color/petition_status_color"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/petition_7dp"
+                android:paddingRight="@dimen/petition_7dp"
+                android:text="@string/petition_get_verification_code"
+                android:textColor="@color/petition_ffffff"
+                android:textSize="@dimen/petition_11dp" />
+
+            <EditText
+                android:id="@+id/edt_yzm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/petition_10dp"
+                android:layout_toLeftOf="@+id/txt_verification"
+                android:layout_toRightOf="@+id/textView3"
+                android:layout_toStartOf="@+id/txt_verification"
+                android:background="@null"
+                android:gravity="right|center_vertical"
+                android:hint="@string/petition_verification_code"
+                android:textColor="@color/petition_0461bc"
+                android:textColorHint="@color/petition_aeaeae"
+                android:textSize="@dimen/petition_10dp" />
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/petition_32dp"
+                android:text="@string/petition_verification_code"
+                android:textColor="@color/petition_565656" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petition_1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="@dimen/petition_10dp"
+                android:background="@color/petition_aeaeae" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/rl_submit"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_44dp"
+            android:layout_marginBottom="@dimen/petition_138dp"
+            android:layout_marginLeft="@dimen/petition_10dp"
+            android:layout_marginRight="@dimen/petition_10dp"
+            android:layout_marginTop="@dimen/petition_57dp"
+            android:background="@color/petition_0461bc">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/submit"
+                android:textColor="@color/petition_ffffff"
+                android:textSize="@dimen/petition_14dp" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

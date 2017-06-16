@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.CoordinatorLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        tools:context=".ui.activity.MainActivity">
+
+        <include layout="@layout/aorise_include_toolbar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <Button
+                android:id="@+id/btn_hospital"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="医疗"/>
+
+            <Button
+                android:id="@+id/btn_education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="教育"/>
+
+            <Button
+                android:id="@+id/btn_petition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="信访"/>
+
+            <Button
+                android:id="@+id/btn_security"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="城管"/>
+
+            <Button
+                android:id="@+id/btn_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="样例"/>
+
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

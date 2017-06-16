@@ -1,2 +1,2 @@
-# AndroidProducts
-Android项目集
+#android-maven
+通用android基础框架  

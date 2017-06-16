@@ -1,0 +1,13 @@
+// ext is a gradle closure allowing the declaration of global properties
+ext {
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.2",
+            minSdkVersion    : 15,
+            targetSdkVersion : 25
+    ]
+
+    dependencies = [
+            'aorise-common': 'cn.aorise:common:1.0.3'
+    ]
+}

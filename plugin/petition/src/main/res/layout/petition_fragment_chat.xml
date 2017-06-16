@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/petition_edf2f6"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_44dp"
+            android:background="@color/petition_status_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petition_57dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/petition_9dp"
+                android:layout_marginLeft="@dimen/aorise_size10"
+                android:layout_marginRight="@dimen/aorise_size10"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_left"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_left_02">
+
+                    <TextView
+                        android:id="@+id/txt_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/petition_information_01"
+                        android:textColor="@color/petition_status_color"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_middle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_middle_01">
+
+                    <TextView
+                        android:id="@+id/txt_middle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/petition_information_02"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_middle_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_middle_01">
+
+                    <TextView
+                        android:id="@+id/txt_middle_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/petition_information_03"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_right_01">
+
+                    <TextView
+                        android:id="@+id/txt_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/petition_information_04"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <cn.aorise.petition.common.commenrefresh.RefreshAndLoadMoreView
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/petition_7dp">
+
+            <cn.aorise.petition.common.commenrefresh.LoadMoreListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@null"
+                android:focusable="false"
+                android:longClickable="false"
+                android:scrollbars="none" />
+        </cn.aorise.petition.common.commenrefresh.RefreshAndLoadMoreView>
+    </LinearLayout>
+</layout>

@@ -1,2 +1,6 @@
-include ':volley', ':AndroidPullToRefresh', ':AndroidDaoGenerator', ':AndroidCommon', ':colorfulnote'
-include ':masktime'
+include ':platform'
+
+include ':plugin:petition'
+include ':plugin:education'
+include ':plugin:hospital'
+include ':plugin:sample'

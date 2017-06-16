@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="petition_add_file_item"
+            type="cn.aorise.petition.ui.bean.LocalFileInfo"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/petition_40dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_40dp">
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="@dimen/petition_14dp"
+                android:layout_height="@dimen/petition_20dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/petition_14dp"
+                app:srcCompat="@drawable/petition_file" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/petition_47dp"
+                android:layout_marginRight="@dimen/petition_12dp"
+                android:layout_toLeftOf="@+id/imageView14"
+                android:layout_toRightOf="@+id/imageView12"
+                android:layout_toStartOf="@+id/imageView14"
+                android:textColor="@color/petition_565656"
+                android:textSize="@dimen/petition_10dp" />
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="@dimen/petition_11dp"
+                android:layout_height="@dimen/petition_12dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/petition_24dp"
+                app:srcCompat="@drawable/petition_delete" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petition_1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@color/petition_aeaeae" />
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

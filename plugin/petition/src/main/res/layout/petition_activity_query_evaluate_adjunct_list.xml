@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/aorise_include_toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_56dp">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_12dp"
+                        android:text="@string/petition_picture_name"
+                        android:textColor="@color/petition_565656"
+                        android:textSize="@dimen/petition_12dp" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+                <cn.aorise.petition.common.xlistview.HorizontalListView
+                    android:id="@+id/mlistview"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_106dp"
+                    android:layout_marginTop="@dimen/petition_9dp"
+                    android:numColumns="3" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_56dp">
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_12dp"
+                        android:text="@string/petition_file_name"
+                        android:textColor="@color/petition_565656"
+                        android:textSize="@dimen/petition_12dp" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <cn.aorise.petition.common.xlistview.MyListView
+                    android:id="@+id/mylistview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/petition_ffffff">
+
+                </cn.aorise.petition.common.xlistview.MyListView>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

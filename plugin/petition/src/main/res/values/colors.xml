@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1051c4</color>
+    <color name="colorPrimaryDark">#1051c4</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="petition_gap_color">#edf2f6</color>
+    <color name="petition_home_text_color">#656d79</color>
+    <color name="petition_edf2f6">#edf2f6</color> <!--背景底色-->
+    <color name="petition_0461bc">#0461bc</color>
+    <color name="petition_aeaeae">#aeaeae</color>
+    <color name="petition_565656">#565656</color>
+    <color name="petition_ffffff">#ffffff</color>
+    <color name="petition_status_color">#1051c4</color>
+    <color name="petition_777777">#777777</color>
+    <color name="petition_1b43cb">#1b43cb</color>
+    <color name="petition_656d79">#656d79</color>
+    <!-- 灰色 -->
+    <color name="grey">#FF999999</color>
+    <!--头部刷新时候的四种颜色-->
+    <color name="refresh_color_1">#ff00ddff</color>
+    <color name="refresh_color_2">#ff99cc00</color>
+    <color name="refresh_color_3">#ffffbb33</color>
+    <color name="refresh_color_4">#ffff4444</color>
+</resources>

@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/aorise_include_toolbar"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/petition_44dp"
+            android:background="@color/petition_status_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/petition_27dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/rl_has_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/petition_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_left_02">
+
+                    <TextView
+                        android:id="@+id/txt_has_answer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="填写基本信息"
+                        android:textColor="@color/petition_status_color"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_not_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="@dimen/petition_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/petition_right_01">
+
+                    <TextView
+                        android:id="@+id/txt_not_answer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="false"
+                        android:layout_alignParentStart="false"
+                        android:layout_alignParentTop="false"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="补充信息"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_12dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ScrollView
+            android:id="@+id/src_base_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_name"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/txt_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView51"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView13"
+                        android:layout_toLeftOf="@+id/imageView11"
+                        android:layout_toRightOf="@+id/textView13"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/petition_hint_01"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView51"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView31"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_card_type"
+                        android:textColor="@color/petition_565656" />
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="@dimen/petition_10dp"
+                        android:layout_height="@dimen/petition_10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/petition_22dp"
+                        app:srcCompat="@drawable/petition_arrows" />
+
+                    <TextView
+                        android:id="@+id/txt_card_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageView12"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginRight="21dp"
+                        android:layout_toLeftOf="@+id/imageView12"
+                        android:layout_toStartOf="@+id/imageView12"
+                        android:textColor="@color/petition_0461bc"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView52"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView32"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_card_num"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_cardnum"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/textView32"
+                        android:layout_alignBottom="@+id/textView32"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView32"
+                        android:layout_toRightOf="@+id/textView32"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/petition_hint_02"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView53"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_phone_number"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_phone_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView54"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView33"
+                        android:layout_toLeftOf="@+id/imageView13"
+                        android:layout_toRightOf="@+id/textView33"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/petition_hint_06"
+                        android:inputType="phone"
+                        android:textColor="@color/petition_aeaeae"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView54"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="出生日期"
+                        android:textColor="@color/petition_565656" />
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="@dimen/petition_10dp"
+                        android:layout_height="@dimen/petition_10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/petition_22dp"
+                        app:srcCompat="@drawable/petition_arrows" />
+
+                    <TextView
+                        android:id="@+id/txt_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageView14"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginRight="21dp"
+                        android:layout_toLeftOf="@+id/imageView14"
+                        android:layout_toStartOf="@+id/imageView14"
+                        android:textColor="@color/petition_0461bc"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView55"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView35"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_sex"
+                        android:textColor="@color/petition_565656" />
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="@dimen/petition_10dp"
+                        android:layout_height="@dimen/petition_10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/petition_22dp"
+                        app:srcCompat="@drawable/petition_arrows" />
+
+                    <TextView
+                        android:id="@+id/txt_sex"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageView15"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginRight="21dp"
+                        android:layout_toLeftOf="@+id/imageView15"
+                        android:layout_toStartOf="@+id/imageView15"
+                        android:textColor="@color/petition_0461bc"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView56"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_area01"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_area_01"
+                        android:textColor="@color/petition_565656" />
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="@dimen/petition_10dp"
+                        android:layout_height="@dimen/petition_10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/petition_22dp"
+                        app:srcCompat="@drawable/petition_arrows" />
+
+                    <TextView
+                        android:id="@+id/txt_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageView16"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginRight="21dp"
+                        android:layout_toLeftOf="@+id/imageView16"
+                        android:layout_toStartOf="@+id/imageView16"
+                        android:textColor="@color/petition_0461bc"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView57"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_detail_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_detail_address"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_detailaddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView58"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView37"
+                        android:layout_toLeftOf="@+id/imageView17"
+                        android:layout_toRightOf="@+id/textView37"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="@string/petition_hint_03"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView58"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_44dp"
+                    android:layout_marginBottom="@dimen/petition_138dp"
+                    android:layout_marginLeft="@dimen/petition_10dp"
+                    android:layout_marginRight="@dimen/petition_10dp"
+                    android:layout_marginTop="@dimen/petition_57dp"
+                    android:background="@color/petition_0461bc">
+
+                    <TextView
+                        android:id="@+id/textView68"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/petition_commit_name"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <ScrollView
+            android:id="@+id/src_other_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_nation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView38"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="@string/petition_nation"
+                        android:textColor="@color/petition_565656" />
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="@dimen/petition_10dp"
+                        android:layout_height="@dimen/petition_10dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/petition_22dp"
+                        app:srcCompat="@drawable/petition_arrows" />
+
+                    <TextView
+                        android:id="@+id/txt_nation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/imageView1"
+                        android:layout_marginEnd="21dp"
+                        android:layout_marginRight="21dp"
+                        android:layout_toLeftOf="@+id/imageView1"
+                        android:layout_toStartOf="@+id/imageView1"
+                        android:text="汉"
+                        android:textColor="@color/petition_0461bc"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView59"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="户口所在地"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_hukousuozaidi"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView511"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView39"
+                        android:layout_toLeftOf="@+id/imageView19"
+                        android:layout_toRightOf="@+id/textView39"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写户口所在地"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView511"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView311"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="职业"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_occupation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView512"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView311"
+                        android:layout_toLeftOf="@+id/imageView111"
+                        android:layout_toRightOf="@+id/textView311"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写您的职业"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView512"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView312"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="工作单位"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_work_unit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView513"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView312"
+                        android:layout_toLeftOf="@+id/imageView112"
+                        android:layout_toRightOf="@+id/textView312"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写工作单位"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView513"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView313"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="固定地址"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_fixde_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView514"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView313"
+                        android:layout_toLeftOf="@+id/imageView113"
+                        android:layout_toRightOf="@+id/textView313"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写固定地址"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView514"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView314"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="通讯地址"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_mailing_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView515"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView314"
+                        android:layout_toLeftOf="@+id/imageView114"
+                        android:layout_toRightOf="@+id/textView314"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写通讯地址"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView515"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView315"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="邮政编码"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_zip_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView516"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView315"
+                        android:layout_toLeftOf="@+id/imageView115"
+                        android:layout_toRightOf="@+id/textView315"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写邮政编码"
+                        android:inputType="number"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView516"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_47dp"
+                    android:background="@color/petition_ffffff">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/petition_32dp"
+                        android:text="电子邮箱"
+                        android:textColor="@color/petition_565656" />
+
+                    <EditText
+                        android:id="@+id/edt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_above="@+id/textView5"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginRight="@dimen/petition_53dp"
+                        android:layout_toEndOf="@+id/textView3"
+                        android:layout_toLeftOf="@+id/imageView11"
+                        android:layout_toRightOf="@+id/textView3"
+                        android:background="@null"
+                        android:gravity="right|center_vertical"
+                        android:hint="请填写电子邮箱"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/petition_0461bc"
+                        android:textColorHint="@color/petition_aeaeae"
+                        android:textSize="@dimen/petition_10dp" />
+
+                    <TextView
+                        android:id="@+id/textView5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/petition_1dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/petition_10dp"
+                        android:background="@color/petition_aeaeae" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_register_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/petition_44dp"
+                    android:layout_marginBottom="@dimen/petition_138dp"
+                    android:layout_marginLeft="@dimen/petition_10dp"
+                    android:layout_marginRight="@dimen/petition_10dp"
+                    android:layout_marginTop="@dimen/petition_57dp"
+                    android:background="@color/petition_0461bc">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:text="@string/petition_commit_name"
+                        android:textColor="@color/petition_ffffff"
+                        android:textSize="@dimen/petition_14dp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

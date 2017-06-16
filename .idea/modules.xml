@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidCommon/AndroidCommon.iml" filepath="$PROJECT_DIR$/AndroidCommon/AndroidCommon.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AndroidDaoGenerator/AndroidDaoGenerator.iml" filepath="$PROJECT_DIR$/AndroidDaoGenerator/AndroidDaoGenerator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AndroidProducts.iml" filepath="$PROJECT_DIR$/AndroidProducts.iml" />
-      <module fileurl="file://$PROJECT_DIR$/AndroidPullToRefresh/AndroidPullToRefresh.iml" filepath="$PROJECT_DIR$/AndroidPullToRefresh/AndroidPullToRefresh.iml" />
-      <module fileurl="file://$PROJECT_DIR$/colorfulnote/colorfulnote.iml" filepath="$PROJECT_DIR$/colorfulnote/colorfulnote.iml" />
-      <module fileurl="file://$PROJECT_DIR$/masktime/masktime.iml" filepath="$PROJECT_DIR$/masktime/masktime.iml" />
-      <module fileurl="file://$PROJECT_DIR$/volley/volley.iml" filepath="$PROJECT_DIR$/volley/volley.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-platform.iml" filepath="$PROJECT_DIR$/android-platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugin/education/education.iml" filepath="$PROJECT_DIR$/plugin/education/education.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugin/hospital/hospital.iml" filepath="$PROJECT_DIR$/plugin/hospital/hospital.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugin/petition/petition.iml" filepath="$PROJECT_DIR$/plugin/petition/petition.iml" />
+      <module fileurl="file://$PROJECT_DIR$/platform/platform.iml" filepath="$PROJECT_DIR$/platform/platform.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugin/plugin.iml" filepath="$PROJECT_DIR$/plugin/plugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/plugin/sample/sample.iml" filepath="$PROJECT_DIR$/plugin/sample/sample.iml" />
     </modules>
   </component>
 </project>

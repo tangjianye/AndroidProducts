@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/petition_16dp"
+            android:background="@color/petition_ffffff">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/petition_10dp"
+                android:layout_marginTop="@dimen/petition_16dp"
+                android:text="@string/petition_suggest_collect_number"
+                android:textColor="@color/petition_565656"
+                android:textSize="@dimen/petition_12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView17"
+                android:layout_marginRight="@dimen/petition_40dp"
+                android:layout_toEndOf="@+id/textView17"
+                android:layout_toLeftOf="@+id/textView23"
+                android:layout_toRightOf="@+id/textView17"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/petition_14dp"
+                android:textColor="@color/petition_777777"
+                android:textSize="@dimen/petition_12dp" />
+
+            <TextView
+                android:id="@+id/textView23"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/textView19"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/petition_10dp"
+
+                android:textColor="@color/petition_status_color"
+                android:textSize="@dimen/petition_12dp" />
+
+            <TextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView17"
+                android:layout_marginLeft="@dimen/petition_10dp"
+                android:layout_marginTop="@dimen/petition_16dp"
+                android:text="@string/petition_suggest_collect_content"
+                android:textColor="@color/petition_565656"
+                android:textSize="@dimen/petition_12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView26"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/textView23"
+                android:layout_alignRight="@+id/textView23"
+                android:layout_alignTop="@+id/textView24"
+                android:layout_marginLeft="@dimen/petition_14dp"
+                android:layout_toRightOf="@+id/textView24"
+
+                android:textColor="@color/petition_777777"
+                android:textSize="@dimen/petition_12dp" />
+
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="@dimen/petition_40dp"
+                android:layout_height="@dimen/petition_40dp"
+                android:layout_alignEnd="@+id/textView26"
+                android:layout_alignRight="@+id/textView26"
+                android:layout_below="@+id/textView26"
+                android:layout_marginBottom="@dimen/petition_10dp" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView26"
+                android:layout_marginLeft="@dimen/petition_10dp"
+                android:layout_marginTop="@dimen/petition_14dp"
+                android:text="@string/petition_suggest_collect_answer_content"
+                android:textColor="@color/petition_1b43cb"
+                android:textSize="@dimen/petition_12dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView28"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView26"
+                android:layout_alignStart="@+id/textView26"
+                android:layout_alignTop="@+id/textView27"
+                android:layout_toLeftOf="@+id/imageView15"
+                android:layout_toStartOf="@+id/imageView15"
+
+                android:textColor="@color/petition_777777"
+                android:textSize="@dimen/petition_12dp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>
