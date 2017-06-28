@@ -1,2 +1,2 @@
-#android-maven
-通用android基础框架  
+#android-products
+android应用汇聚地  
