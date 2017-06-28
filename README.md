@@ -1,4 +1,7 @@
 Android应用汇聚地  
 
-## takeaway
+## Icon颜色值
+`5481CC`
+
+## Takeaway
 外卖APP
