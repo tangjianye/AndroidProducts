@@ -1,5 +1,13 @@
 apply plugin: 'com.android.application'
 
+def APP_NAME = 'takeaway'
+def BUILD_TIME = new Date().format("yyyyMMdd", TimeZone.getTimeZone("UTC"))
+
+
+/**
+ * 1. gradle clean
+ * 2. gradle build / gradle assembleRelease
+ */
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
@@ -14,10 +22,43 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+        release {
+            try {
+                keyAlias KEY_ALIAS
+                keyPassword KEY_PASSWORD
+                storeFile file('../keystore/keyStore.jks')
+                storePassword STORE_PASSWORD
+                v2SigningEnabled false
+            } catch (ex) {
+                throw new InvalidUserDataException(ex.toString())
+            }
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    // Rename APP
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            // def name = APP_NAME + '-' + variant.productFlavors[0].name
+            def name = APP_NAME
+            def version = 'v' + defaultConfig.versionName
+
+            println 'variant.outputs: ${variant.buildType.name} output.outputFile: ${output.outputFile}'
+            if (variant.buildType.name.equals('release')) {
+                def apkName = name + '-' + version + '-' + BUILD_TIME + '-release.apk'
+                output.outputFile = new File(output.outputFile.parent, apkName)
+            }
+
+            if (variant.buildType.name.equals('debug')) {
+                // def apkName = name + '-' + version + '-' + BUILD_TIME + '-debug.apk'
+                def apkName = name + '-debug.apk'
+                output.outputFile = new File(output.outputFile.parent, apkName)
+            }
         }
     }
 }
