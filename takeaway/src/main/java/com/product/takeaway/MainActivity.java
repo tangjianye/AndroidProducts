@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.product.takeaway.base.BaseWebActivity;
 
-public class TakeawayActivity extends BaseWebActivity {
+public class MainActivity extends BaseWebActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
