@@ -10,6 +10,6 @@ public class TakeawayActivity extends BaseWebActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // loadUrl("file:///android_asset/js/index.html");
-        loadUrl("http://192.168.0.75:8100/");
+        loadUrl("https://aorise-org.github.io/takeaway/");
     }
 }

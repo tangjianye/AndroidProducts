@@ -51,8 +51,19 @@ public class BaseWebActivity extends AppCompatActivity {
         webSettings.setLoadWithOverviewMode(true);
         webSettings.setCacheMode(WebSettings.LOAD_NO_CACHE);
         // webSettings.setDatabasePath("/data/data/"+this.getPackageName()+"/databases/");
+        setCustomUserAgent(webSettings);
     }
 
+    private void setCustomUserAgent(WebSettings webSettings) {
+        String ua = webSettings.getUserAgentString();
+        if (null == ua) {
+            ua = "Mozilla/5.0 (Linux; Android 4.4.2; Lenovo S856 Build/KVT49L) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/30.0.0.0 Mobile Safari/537.36";
+        }
+        // 访问的限制条件
+        String newUa = String.format("%s%s", ua, "; AORISE-ANDROID-WEBKIT");
+        webSettings.setUserAgentString(newUa);
+        Log.d(TAG, webSettings.getUserAgentString());
+    }
 
     /**
      * 加载URL地址
